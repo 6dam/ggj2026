@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://chbb8elixtrlj" path="res://Scenes/player_scene.tscn" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://vujb1ae7wu24" path="res://Scenes/wall_cube.tscn" id="2_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://bo0cgqrnedm8k" path="res://Scenes/worm.tscn" id="3_8gbba"]
 
 [node name="main" type="Node2D" unique_id=177634896]
 
@@ -39,3 +40,5 @@ scale = Vector2(38.508583, 6.777675)
 [node name="wallCube4" parent="." unique_id=2064495232 instance=ExtResource("2_bo1nx")]
 position = Vector2(708.00006, 281)
 scale = Vector2(1.8879838, 1.8879838)
+
+[node name="worm" parent="." unique_id=2023631 instance=ExtResource("3_8gbba")]
