@@ -1,0 +1,56 @@
+[gd_scene format=4 uid="uid://cv5stgpi1iytg"]
+
+[ext_resource type="PackedScene" uid="uid://chbb8elixtrlj" path="res://Scenes/player_scene.tscn" id="1_v3rpw"]
+[ext_resource type="PackedScene" uid="uid://mxyhyqbwsr76" path="res://Scenes/mask.tscn" id="2_12fag"]
+[ext_resource type="Texture2D" uid="uid://sivfh0d2thih" path="res://Art/HighJumpMask.png" id="3_1q6tm"]
+[ext_resource type="PackedScene" uid="uid://vujb1ae7wu24" path="res://Scenes/wall_cube.tscn" id="4_1q6tm"]
+[ext_resource type="PackedScene" uid="uid://ugqxpghr70wf" path="res://Scenes/tileMapLayerTemplate.tscn" id="5_v36qu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v36qu"]
+size = Vector2(384, 192)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cggpd"]
+size = Vector2(256, 64)
+
+[node name="level_2" type="Node2D" unique_id=741999394]
+
+[node name="playerScene" parent="." unique_id=1882959398 instance=ExtResource("1_v3rpw")]
+position = Vector2(89, 0)
+
+[node name="Mask" parent="." unique_id=2009403124 instance=ExtResource("2_12fag")]
+position = Vector2(264, -27)
+maskName = "highjump"
+sprite = ExtResource("3_1q6tm")
+
+[node name="wallCube" parent="." unique_id=1598988486 instance=ExtResource("4_1q6tm")]
+position = Vector2(256, 256)
+scale = Vector2(16, 16)
+
+[node name="wallCube2" parent="." unique_id=669174654 instance=ExtResource("4_1q6tm")]
+position = Vector2(891, 256)
+scale = Vector2(16, 16)
+
+[node name="wallCube3" parent="." unique_id=144921250 instance=ExtResource("4_1q6tm")]
+position = Vector2(1022, 197)
+scale = Vector2(16, 16)
+
+[node name="wallCube4" parent="." unique_id=842404033 instance=ExtResource("4_1q6tm")]
+position = Vector2(1157, 121)
+scale = Vector2(16, 16)
+
+[node name="wallCube5" parent="." unique_id=2136042947 instance=ExtResource("4_1q6tm")]
+position = Vector2(1526, -300)
+scale = Vector2(16, 16)
+
+[node name="TileMapLayer" parent="." unique_id=1006179694 instance=ExtResource("5_v36qu")]
+tile_map_data = PackedByteArray("AAD+/wAAAQACAAEAAAD9/wAAAQACAAEAAAD8/wAAAQACAAEAAAD7/wAAAQACAAEAAAD6/wAAAQACAAEAAAD5/wAAAQACAAEAAAD5/wEAAQACAAIAAAD6/wEAAQACAAIAAAD7/wEAAQACAAIAAAD8/wEAAQACAAIAAAD9/wEAAQACAAIAAAD+/wEAAQACAAIAAAD+/wIAAQACAAIAAAD9/wIAAQACAAIAAAD8/wIAAQACAAIAAAD7/wIAAQACAAIAAAD6/wIAAQACAAIAAAD5/wIAAQACAAIAAAD5//7/AQAEAAEAAAD6//7/AQAEAAEAAAD7//7/AQAEAAEAAAD4//7/AQAEAAEAAAD3////AQAAAAAAAAD3//7/AQAAAAAAAAD3//3/AQAAAAAAAAD3//z/AQAAAAAAAAD4//z/AQAAAAAAAAD5//z/AQAAAAAAAAD6//z/AQAAAAAAAAD7//z/AQAAAAAAAAD8//z/AQAAAAAAAAD9//z/AQAAAAAAAAD+//z/AQAAAAAAAAD+//3/AQAAAAAAAAD+//7/AQAAAAAAAAD+////AQAAAAAAAAD9////AQAAAAAAAAD8////AQAAAAAAAAD7////AQAAAAAAAAD6////AQAAAAAAAAD5////AQAAAAAAAAD4////AQAAAAAAAAD4//3/AQAAAAAAAAD5//3/AQAAAAAAAAD6//3/AQAAAAAAAAD7//3/AQAAAAAAAAD8//3/AQAAAAAAAAD9//3/AQAAAAAAAAD9//7/AQAAAAAAAAD8//7/AQAAAAAAAAD3/wAAAQAAAAAAAAD4/wAAAQAAAAAAAAD3/wEAAQAAAAAAAAD4/wEAAQAAAAAAAAD4/wIAAQAAAAAAAAD3/wIAAQAAAAAAAAA=")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1645688842]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2098803553]
+position = Vector2(-256, 96)
+shape = SubResource("RectangleShape2D_v36qu")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1036847215]
+position = Vector2(-384, -96)
+shape = SubResource("RectangleShape2D_cggpd")

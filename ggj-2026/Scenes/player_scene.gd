@@ -21,9 +21,9 @@ func _physics_process(delta: float) -> void:
 		_mask_swap(true)#true for right hand
 		
 	#Mask action inputs
-	if Input.is_action_just_released("mask_left"):
+	if Input.is_action_pressed("mask_left"):
 		_mask_use(leftMask)
-	if Input.is_action_just_released("mask_right"):
+	if Input.is_action_pressed("mask_right"):
 		_mask_use(rightMask)
 	
 	# Add the gravity.
@@ -43,10 +43,10 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
-	if abs(velocity.x) > 0:
-		animatedSprite.play("run")
-	elif abs(velocity.y)>0:
+	if abs(velocity.y)>0:
 		animatedSprite.play("jump")
+	elif abs(velocity.x) > 0:
+		animatedSprite.play("run")
 	else:
 		animatedSprite.play("idle")
 		
@@ -61,6 +61,9 @@ func _physics_process(delta: float) -> void:
 func _mask_use(mask):#func is given the mask name, and does the corresponding action
 	if mask:
 		match mask.maskName:
+			"highjump":
+				if is_on_floor():
+					velocity.y = -1000
 			"none":
 				pass
 			"hover":
