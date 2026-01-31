@@ -101,10 +101,10 @@ shape = SubResource("CircleShape2D_e13mc")
 debug_color = Color(0.1882353, 0.8117647, 0, 0.105882354)
 
 [node name="leftMarker2d" type="Marker2D" parent="." unique_id=179324584]
-position = Vector2(-30, -34)
+position = Vector2(-30, -50)
 
 [node name="rightMarker2d" type="Marker2D" parent="." unique_id=1690473776]
-position = Vector2(30, -34)
+position = Vector2(30, -50)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1099136709]
 position = Vector2(0, -32)
