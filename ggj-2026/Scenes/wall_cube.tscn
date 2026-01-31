@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://vujb1ae7wu24"]
+
+[ext_resource type="Texture2D" uid="uid://c2yjq2smqd3lk" path="res://Art/oddBlock.png" id="1_fnqsl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2t2x4"]
+size = Vector2(32, 32)
+
+[node name="wallCube" type="StaticBody2D" unique_id=1598988486]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=5516759]
+shape = SubResource("RectangleShape2D_2t2x4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=493188653]
+texture_filter = 1
+texture = ExtResource("1_fnqsl")

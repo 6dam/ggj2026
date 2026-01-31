@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bk0yujgr3nlxs"]
+
+[ext_resource type="PackedScene" uid="uid://chbb8elixtrlj" path="res://Scenes/player_scene.tscn" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://vujb1ae7wu24" path="res://Scenes/wall_cube.tscn" id="2_bo1nx"]
+
+[node name="main" type="Node2D" unique_id=177634896]
+
+[node name="levelContainer" type="Node2D" parent="." unique_id=1895054656]
+
+[node name="entityContainer" type="Node2D" parent="." unique_id=69299337]
+
+[node name="playerScene" parent="entityContainer" unique_id=1882959398 instance=ExtResource("1_jjgbg")]
+position = Vector2(-436, 122)
+
+[node name="wallCube" parent="." unique_id=1598988486 instance=ExtResource("2_bo1nx")]
+position = Vector2(248, 242)
+
+[node name="wallCube7" parent="." unique_id=1779075471 instance=ExtResource("2_bo1nx")]
+position = Vector2(175, 315)
+
+[node name="wallCube2" parent="." unique_id=1978720907 instance=ExtResource("2_bo1nx")]
+position = Vector2(369.00003, 357)
+scale = Vector2(4.941392, 4.941392)
+
+[node name="wallCube3" parent="." unique_id=662733503 instance=ExtResource("2_bo1nx")]
+position = Vector2(547.00006, 234)
+scale = Vector2(1.8879838, 1.8879838)
+
+[node name="wallCube5" parent="." unique_id=1211696998 instance=ExtResource("2_bo1nx")]
+position = Vector2(908.00006, 304.00003)
+rotation = -0.1549026
+scale = Vector2(6.816502, 6.816502)
+
+[node name="wallCube6" parent="." unique_id=115754497 instance=ExtResource("2_bo1nx")]
+position = Vector2(-285, 358)
+rotation = 0.29141644
+scale = Vector2(38.508583, 6.777675)
+
+[node name="wallCube4" parent="." unique_id=2064495232 instance=ExtResource("2_bo1nx")]
+position = Vector2(708.00006, 281)
+scale = Vector2(1.8879838, 1.8879838)
