@@ -10,6 +10,7 @@ var rightMaskButtonTime = 0.0
 var buttonPressTime = 0.8
 @onready var leftMarker = $leftMarker2d
 @onready var rightMarker = $rightMarker2d
+@onready var animatedSprite = $AnimatedSprite2D
 
 func _ready() -> void:
 	main.player = self
@@ -47,6 +48,18 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+
+	if abs(velocity.x) > 0:
+		animatedSprite.play("run")
+	elif abs(velocity.y)>0:
+		animatedSprite.play("jum p")
+	else:
+		animatedSprite.play("idle")
+		
+	if velocity.x < 0:
+		animatedSprite.flip_h = true
+	if velocity.x > 0:
+		animatedSprite.flip_h = false
 
 	move_and_slide()
 
