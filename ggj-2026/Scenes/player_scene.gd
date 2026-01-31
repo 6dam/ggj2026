@@ -5,6 +5,7 @@ const JUMP_VELOCITY = -400.0
 
 var leftMask
 var rightMask
+var hovering
 @onready var leftMarker = $leftMarker2d
 @onready var rightMarker = $rightMarker2d
 @onready var animatedSprite = $AnimatedSprite2D
@@ -61,9 +62,11 @@ func _physics_process(delta: float) -> void:
 func _mask_use(mask):#func is given the mask name, and does the corresponding action
 	if mask:
 		match mask.maskName:
+			"hover":
+				hovering = true
 			"highjump":
 				if is_on_floor():
-					velocity.y = -1000
+					velocity.y = -600
 			"none":
 				pass
 			"hover":

@@ -23,6 +23,11 @@ config/icon="res://icon.svg"
 
 global="*uid://0jhppt5xb5ot"
 
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=800
+
 [global_group]
 
 mask=""

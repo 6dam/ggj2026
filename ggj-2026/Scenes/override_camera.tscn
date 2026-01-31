@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c4r0yj1ccfxw3"]
+
+[ext_resource type="Script" uid="uid://mc8axfgm3ym" path="res://Scenes/override_camera.gd" id="1_4yplb"]
+
+[node name="overrideCamera" type="Camera2D" unique_id=1451669185]
+script = ExtResource("1_4yplb")
