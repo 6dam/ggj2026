@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://mxyhyqbwsr76"]
+
+[ext_resource type="Script" uid="uid://bensuur2l5c4o" path="res://Scenes/template_mask.gd" id="1_04nl0"]
+[ext_resource type="Texture2D" uid="uid://bqm7pa2tlhsdb" path="res://Art/brainstorm/mask1.png" id="1_o15ud"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_04nl0"]
+size = Vector2(16, 16)
+
+[node name="templateMask" type="RigidBody2D" unique_id=1049253443 groups=["mask"]]
+script = ExtResource("1_04nl0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1257596358]
+texture = ExtResource("1_o15ud")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=736203194]
+shape = SubResource("RectangleShape2D_04nl0")
