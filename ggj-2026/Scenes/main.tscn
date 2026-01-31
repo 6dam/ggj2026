@@ -3,11 +3,15 @@
 [ext_resource type="PackedScene" uid="uid://chbb8elixtrlj" path="res://Scenes/player_scene.tscn" id="1_jjgbg"]
 [ext_resource type="Script" uid="uid://bb72m1hyrp807" path="res://Scenes/main.gd" id="1_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://mxyhyqbwsr76" path="res://Scenes/template_mask.tscn" id="2_8gbba"]
+[ext_resource type="PackedScene" uid="uid://ddf3pmmjg1m7u" path="res://Scenes/TileMapLayer_test.tscn" id="2_21xkr"]
 [ext_resource type="PackedScene" uid="uid://vujb1ae7wu24" path="res://Scenes/wall_cube.tscn" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://bo0cgqrnedm8k" path="res://Scenes/worm.tscn" id="3_8gbba"]
 
 [node name="main" type="Node2D" unique_id=177634896]
 script = ExtResource("1_jjvhh")
+
+[node name="tilemapTest" parent="." unique_id=662447802 instance=ExtResource("2_21xkr")]
+position = Vector2(-1525, 213)
 
 [node name="levelContainer" type="Node2D" parent="." unique_id=1895054656]
 
@@ -17,7 +21,7 @@ script = ExtResource("1_jjvhh")
 position = Vector2(-436, 122)
 
 [node name="templateMask" parent="entityContainer" unique_id=1053501653 instance=ExtResource("2_8gbba")]
-position = Vector2(-271, 204)
+position = Vector2(-272, 204)
 
 [node name="templateMask2" parent="entityContainer" unique_id=15028139 instance=ExtResource("2_8gbba")]
 position = Vector2(-584, 189)

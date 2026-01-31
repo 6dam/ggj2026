@@ -45,7 +45,7 @@ func _physics_process(delta: float) -> void:
 	if abs(velocity.x) > 0:
 		animatedSprite.play("run")
 	elif abs(velocity.y)>0:
-		animatedSprite.play("jum p")
+		animatedSprite.play("jump")
 	else:
 		animatedSprite.play("idle")
 		
