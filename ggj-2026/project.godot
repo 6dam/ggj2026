@@ -21,11 +21,12 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-main="*uid://bb72m1hyrp807"
+global="*uid://0jhppt5xb5ot"
 
 [global_group]
 
 mask=""
+enemy=""
 
 [input]
 

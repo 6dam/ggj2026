@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://ccy8ylcibc0fq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e6qmq"]
+
+[node name="Lava" type="Area2D" unique_id=94987458 groups=["enemy"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=209642965]
+shape = SubResource("RectangleShape2D_e6qmq")
+debug_color = Color(0.31293935, 0.20674148, 0.022405323, 0.41960785)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=161561893]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.98, 0, 0, 1)

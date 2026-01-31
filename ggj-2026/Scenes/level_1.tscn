@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://switqg71mwdp"]
+
+[ext_resource type="PackedScene" uid="uid://chbb8elixtrlj" path="res://Scenes/player_scene.tscn" id="1_6444e"]
+[ext_resource type="PackedScene" uid="uid://mxyhyqbwsr76" path="res://Scenes/template_mask.tscn" id="2_evi0p"]
+[ext_resource type="PackedScene" uid="uid://vujb1ae7wu24" path="res://Scenes/wall_cube.tscn" id="3_lsmp6"]
+[ext_resource type="PackedScene" uid="uid://ccy8ylcibc0fq" path="res://Scenes/lava.tscn" id="4_xrdnt"]
+[ext_resource type="PackedScene" path="res://Scenes/worm.tscn" id="5_wrinw"]
+
+[node name="level1" type="Node2D" unique_id=997325918]
+
+[node name="playerScene" parent="." unique_id=1882959398 instance=ExtResource("1_6444e")]
+position = Vector2(-436, 122)
+
+[node name="templateMask" parent="." unique_id=2009403124 instance=ExtResource("2_evi0p")]
+position = Vector2(-271, 204)
+
+[node name="templateMask2" parent="." unique_id=362420767 instance=ExtResource("2_evi0p")]
+position = Vector2(-584, 189)
+
+[node name="templateMask3" parent="." unique_id=1716843470 instance=ExtResource("2_evi0p")]
+position = Vector2(-555, 224)
+
+[node name="wallCube" parent="." unique_id=1598988486 instance=ExtResource("3_lsmp6")]
+position = Vector2(-68, 148)
+
+[node name="wallCube7" parent="." unique_id=493805875 instance=ExtResource("3_lsmp6")]
+position = Vector2(-141, 221)
+
+[node name="wallCube2" parent="." unique_id=998914973 instance=ExtResource("3_lsmp6")]
+position = Vector2(53.00003, 263)
+scale = Vector2(4.941392, 4.941392)
+
+[node name="wallCube3" parent="." unique_id=1880141738 instance=ExtResource("3_lsmp6")]
+position = Vector2(231.00009, 140)
+scale = Vector2(1.8879838, 1.8879838)
+
+[node name="wallCube5" parent="." unique_id=912546857 instance=ExtResource("3_lsmp6")]
+position = Vector2(592.00006, 210.00003)
+rotation = -0.15490259
+scale = Vector2(6.816502, 6.816502)
+
+[node name="wallCube6" parent="." unique_id=1749625530 instance=ExtResource("3_lsmp6")]
+position = Vector2(-626, 353.00003)
+rotation = 0.048724964
+scale = Vector2(38.508583, 6.777675)
+
+[node name="wallCube4" parent="." unique_id=769330496 instance=ExtResource("3_lsmp6")]
+position = Vector2(392.0001, 187)
+scale = Vector2(1.8879838, 1.8879838)
+
+[node name="Lava" parent="." unique_id=94987458 instance=ExtResource("4_xrdnt")]
+position = Vector2(-438, 872)
+scale = Vector2(191.32587, 47.30076)
+
+[node name="worm" parent="." unique_id=1699369177 instance=ExtResource("5_wrinw")]

@@ -10,7 +10,8 @@ var rightMask
 @onready var animatedSprite = $AnimatedSprite2D
 
 func _ready() -> void:
-	main.player = self
+	pass
+	global.player = self
 
 func _physics_process(delta: float) -> void:
 	#mask swapping inputs
@@ -45,7 +46,7 @@ func _physics_process(delta: float) -> void:
 	if abs(velocity.x) > 0:
 		animatedSprite.play("run")
 	elif abs(velocity.y)>0:
-		animatedSprite.play("jum p")
+		animatedSprite.play("jump")
 	else:
 		animatedSprite.play("idle")
 		
@@ -93,3 +94,16 @@ func mask_updates():
 		leftMask.global_position = leftMarker.global_position
 	if rightMask:
 		rightMask.global_position = rightMarker.global_position
+
+func die():
+	global.main.load_level(global.main.level1)
+
+
+func _on_hitbox_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("enemy"):
+		die()
+
+
+func _on_hitbox_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("enemy"):
+		die()

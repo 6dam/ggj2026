@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://bo0cgqrnedm8k"]
+[gd_scene format=3 uid="uid://8wugv7be35u0"]
 
-[ext_resource type="Script" uid="uid://lieoyvib7xwo" path="res://Scenes/worm.gd" id="1_l5dqu"]
+[ext_resource type="Script" path="res://Scenes/worm.gd" id="1_l5dqu"]
 [ext_resource type="Texture2D" uid="uid://ci1ag1to3c8f6" path="res://Art/worm_crawl.png" id="1_skiwb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l5dqu"]
@@ -29,7 +29,7 @@ animations = [{
 radius = 8.375
 height = 64.0
 
-[node name="worm" type="CharacterBody2D" unique_id=1699369177]
+[node name="worm" type="CharacterBody2D" unique_id=1699369177 groups=["enemy"]]
 script = ExtResource("1_l5dqu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2144909496]
