@@ -8,6 +8,9 @@
 =======
 [ext_resource type="PackedScene" uid="uid://mxyhyqbwsr76" path="res://Scenes/mask.tscn" id="2_12fag"]
 [ext_resource type="Texture2D" uid="uid://sivfh0d2thih" path="res://Art/HighJumpMask.png" id="3_1q6tm"]
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 [ext_resource type="PackedScene" uid="uid://ugqxpghr70wf" path="res://Scenes/tileMapLayerTemplate.tscn" id="5_v36qu"]
 [ext_resource type="PackedScene" uid="uid://c4r0yj1ccfxw3" path="res://Scenes/override_camera.tscn" id="6_cggpd"]
@@ -39,6 +42,7 @@ size = Vector2(64, 447)
 position = Vector2(89, 0)
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [node name="wallCube" parent="." unique_id=1598988486 instance=ExtResource("4_1q6tm")]
 position = Vector2(256, 256)
 scale = Vector2(16, 16)
@@ -59,10 +63,15 @@ scale = Vector2(16, 16)
 position = Vector2(1526, -300)
 scale = Vector2(16, 16)
 =======
+=======
+>>>>>>> Stashed changes
 [node name="Mask" parent="." unique_id=2009403124 instance=ExtResource("2_12fag")]
 position = Vector2(264, -27)
 maskName = "highjump"
 sprite = ExtResource("3_1q6tm")
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 [node name="TileMapLayer" parent="." unique_id=1006179694 instance=ExtResource("5_v36qu")]
@@ -83,10 +92,13 @@ position = Vector2(-384, -96)
 shape = SubResource("RectangleShape2D_cggpd")
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [node name="Mask" parent="." unique_id=2009403124 instance=ExtResource("4_v36qu")]
 maskName = "highjump"
 sprite = ExtResource("5_cggpd")
 =======
+=======
+>>>>>>> Stashed changes
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1421544981]
 position = Vector2(-64, -224)
 shape = SubResource("RectangleShape2D_055b2")
@@ -109,4 +121,7 @@ shape = SubResource("RectangleShape2D_42uki")
 
 [node name="overrideCamera" parent="." unique_id=1451669185 instance=ExtResource("6_cggpd")]
 position = Vector2(42, -157)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
