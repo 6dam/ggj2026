@@ -1,0 +1,46 @@
+[gd_scene format=4 uid="uid://ddf3pmmjg1m7u"]
+
+[ext_resource type="Texture2D" uid="uid://beiu2kuwav8fm" path="res://Art/floor1.png" id="1_826og"]
+[ext_resource type="Texture2D" uid="uid://cxds5fv2eg2js" path="res://Art/wall1.png" id="2_r1kjh"]
+[ext_resource type="Texture2D" uid="uid://bk6kwtboybosv" path="res://Art/wall2.png" id="3_7qe4v"]
+[ext_resource type="Texture2D" uid="uid://c4e0xa4n3xn04" path="res://Art/wall3.png" id="4_73m5j"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ee8ob"]
+texture = ExtResource("1_826og")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ivr1p"]
+texture = ExtResource("2_r1kjh")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_232m8"]
+texture = ExtResource("3_7qe4v")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8yh07"]
+texture = ExtResource("4_73m5j")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_etsf2"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_ee8ob")
+sources/1 = SubResource("TileSetAtlasSource_ivr1p")
+sources/2 = SubResource("TileSetAtlasSource_232m8")
+sources/3 = SubResource("TileSetAtlasSource_8yh07")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_826og"]
+size = Vector2(510, 62)
+
+[node name="Node2D" type="StaticBody2D" unique_id=662447802]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2108867932]
+tile_map_data = PackedByteArray("AAD8/wAAAAAAAAAAAAD9/wAAAAAAAAAAAAD+/wAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAD8////AQAAAAAAAAD+////AQAAAAAAAAAAAP//AQAAAAAAAAACAP//AQAAAAAAAAD9////AgAAAAAAAAD/////AgAAAAAAAAABAP//AgAAAAAAAAADAP//AgAAAAAAAAD9//7/AQAAAAAAAAD///7/AQAAAAAAAAABAP7/AQAAAAAAAAADAP7/AQAAAAAAAAD8//7/AwAAAAAAAAD+//7/AwAAAAAAAAAAAP7/AwAAAAAAAAACAP7/AwAAAAAAAAD9//3/AgAAAAAAAAD///3/AgAAAAAAAAABAP3/AgAAAAAAAAADAP3/AgAAAAAAAAD8//z/AwAAAAAAAAD+//z/AwAAAAAAAAAAAPz/AwAAAAAAAAACAPz/AwAAAAAAAAD8//3/AQAAAAAAAAD9//z/AQAAAAAAAAD+//3/AQAAAAAAAAD///z/AQAAAAAAAAAAAP3/AQAAAAAAAAABAPz/AQAAAAAAAAACAP3/AQAAAAAAAAADAPz/AQAAAAAAAAA=")
+tile_set = SubResource("TileSet_etsf2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1305646951]
+position = Vector2(0, 33)
+shape = SubResource("RectangleShape2D_826og")
