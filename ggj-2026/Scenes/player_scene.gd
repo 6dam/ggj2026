@@ -30,7 +30,8 @@ func _physics_process(delta: float) -> void:
 	if rightMaskButtonTime >= buttonPressTime:
 		_mask_swap(true)#true for right hand
 		rightMaskButtonTime = -buttonPressTime#additional button wait time after swapping
-		
+	
+	mask_updates()
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -75,3 +76,7 @@ func get_closest_mask():
 				smallestDistance = abs(global_position.length() - overlapArray[i].global_position.length())
 				closestMask = overlapArray[i]
 	return closestMask
+
+func mask_updates():
+	if leftMask:
+		leftMask.global_position = leftMarker.global_position
