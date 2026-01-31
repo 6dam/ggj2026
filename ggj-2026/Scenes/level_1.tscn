@@ -2,8 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://chbb8elixtrlj" path="res://Scenes/player_scene.tscn" id="1_6444e"]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://ddf3pmmjg1m7u" path="res://Scenes/TileMapLayer_test.tscn" id="1_evi0p"]
 [ext_resource type="PackedScene" uid="uid://mxyhyqbwsr76" path="res://Scenes/template_mask.tscn" id="2_evi0p"]
+=======
+[ext_resource type="PackedScene" uid="uid://mxyhyqbwsr76" path="res://Scenes/mask.tscn" id="2_evi0p"]
+>>>>>>> Stashed changes
 =======
 [ext_resource type="PackedScene" uid="uid://mxyhyqbwsr76" path="res://Scenes/mask.tscn" id="2_evi0p"]
 >>>>>>> Stashed changes
