@@ -1,28 +1,12 @@
 [gd_scene format=3 uid="uid://switqg71mwdp"]
 
 [ext_resource type="PackedScene" uid="uid://chbb8elixtrlj" path="res://Scenes/player_scene.tscn" id="1_6444e"]
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-[ext_resource type="PackedScene" uid="uid://ddf3pmmjg1m7u" path="res://Scenes/TileMapLayer_test.tscn" id="1_evi0p"]
-[ext_resource type="PackedScene" uid="uid://mxyhyqbwsr76" path="res://Scenes/template_mask.tscn" id="2_evi0p"]
-=======
 [ext_resource type="PackedScene" uid="uid://mxyhyqbwsr76" path="res://Scenes/mask.tscn" id="2_evi0p"]
->>>>>>> Stashed changes
-=======
-[ext_resource type="PackedScene" uid="uid://mxyhyqbwsr76" path="res://Scenes/mask.tscn" id="2_evi0p"]
->>>>>>> Stashed changes
-=======
-[ext_resource type="PackedScene" uid="uid://mxyhyqbwsr76" path="res://Scenes/mask.tscn" id="2_evi0p"]
->>>>>>> Stashed changes
 [ext_resource type="PackedScene" uid="uid://vujb1ae7wu24" path="res://Scenes/wall_cube.tscn" id="3_lsmp6"]
 [ext_resource type="PackedScene" uid="uid://ccy8ylcibc0fq" path="res://Scenes/lava.tscn" id="4_xrdnt"]
 [ext_resource type="PackedScene" uid="uid://8wugv7be35u0" path="res://Scenes/worm.tscn" id="5_wrinw"]
 
 [node name="level1" type="Node2D" unique_id=997325918]
-
-[node name="tilemaplayer_test" parent="." unique_id=662447802 instance=ExtResource("1_evi0p")]
-position = Vector2(-1520, 213)
 
 [node name="playerScene" parent="." unique_id=1882959398 instance=ExtResource("1_6444e")]
 position = Vector2(-455, 235)
