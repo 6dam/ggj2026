@@ -70,6 +70,8 @@ func _mask_use(mask):#func is given the mask name, and does the corresponding ac
 				pass
 			"Template":
 				velocity.y = JUMP_VELOCITY
+			"sludge":
+				pass
 
 func _mask_swap(rightHanded):
 	var closestMask = get_closest_mask()
