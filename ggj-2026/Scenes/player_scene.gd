@@ -12,8 +12,15 @@ var hovering = false
 var hoverUsable = false
 var dashVector = 0
 
-@onready var leftMarker = $leftMarker2d
-@onready var rightMarker = $rightMarker2d
+@onready var defaultMarkerPosition = $armPivotMarker.position
+var leftMarkerPosition = Vector2(22,-32)
+var rightMarkerPosition = Vector2(-22,-32)
+var leftMarkerTilt = -24.0
+var rightMarkerTilt = 24.0
+var maskMode = 0
+
+@onready var leftMarker = $armPivotMarker/leftMarker2d
+@onready var rightMarker = $armPivotMarker/rightMarker2d
 @onready var animatedSprite = $AnimatedSprite2D
 @onready var sludgeTimer = $sludgeTimer
 
@@ -23,7 +30,7 @@ func _ready() -> void:
 	global.poundReady = true
 
 func _physics_process(delta: float) -> void:
-	
+	maskModeUpdate()
 	# Add the gravity.
 	if not is_on_floor() and hovering == false:
 		velocity += get_gravity() * delta
@@ -73,8 +80,12 @@ func _physics_process(delta: float) -> void:
 	#Mask action inputs
 	if Input.is_action_pressed("mask_left"):
 		_mask_use(leftMask, direction)
+		maskMode = -1
+		$maskUseTimer.start()
 	if Input.is_action_pressed("mask_right"):
 		_mask_use(rightMask, direction)
+		maskMode = 1
+		$maskUseTimer.start()
 
 func _mask_use(mask, direction):#func is given the mask name, and does the corresponding action
 	if mask:
@@ -172,3 +183,23 @@ func shootSludge(mask):
 func _on_ground_pound_hitbox_area_entered(area: Area2D) -> void:
 	if area.is_in_group("enemy") and global.poundReady:
 		area.owner.queue_free()
+
+
+func _on_mask_use_timer_timeout() -> void:
+	maskMode = 0
+
+func maskModeUpdate():
+	var pivot = $armPivotMarker
+	var armSpeed = 0.3
+	if maskMode == 0:
+		pivot.position = lerp(pivot.position, defaultMarkerPosition, armSpeed)
+		pivot.rotation = lerp(pivot.rotation_degrees, 0.0, armSpeed)
+	if maskMode == 1:
+		pivot.position = lerp(pivot.position, rightMarkerPosition, armSpeed)
+		pivot.rotation = lerp(pivot.rotation_degrees, rightMarkerTilt, armSpeed)
+	if maskMode == -1:
+		pivot.position = lerp(pivot.position, leftMarkerPosition, armSpeed)
+		pivot.rotation = lerp(pivot.rotation_degrees, leftMarkerTilt, armSpeed)
+		
+		
+		
