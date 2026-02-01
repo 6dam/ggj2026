@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://c4r0yj1ccfxw3" path="res://Scenes/override_camera.tscn" id="3_qq0pw"]
 [ext_resource type="PackedScene" uid="uid://bxqmyalua77ja" path="res://Scenes/exitDoor.tscn" id="4_oxjhd"]
 [ext_resource type="PackedScene" path="res://Scenes/level_A.tscn" id="5_aet5h"]
+[ext_resource type="PackedScene" uid="uid://mxyhyqbwsr76" path="res://Scenes/mask.tscn" id="6_qq0pw"]
+[ext_resource type="Texture2D" uid="uid://cqiw0plurn45x" path="res://Art/sludge.png" id="7_oxjhd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e06xn"]
 size = Vector2(1216, 30.5)
@@ -44,3 +46,8 @@ position = Vector2(32, -80)
 [node name="ExitDoor" parent="." unique_id=570306949 instance=ExtResource("4_oxjhd")]
 position = Vector2(479, -367)
 nextLevel = ExtResource("5_aet5h")
+
+[node name="Mask" parent="." unique_id=2009403124 instance=ExtResource("6_qq0pw")]
+position = Vector2(-254, 165)
+maskName = "sludge"
+sprite = ExtResource("7_oxjhd")
