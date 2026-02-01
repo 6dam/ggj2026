@@ -49,7 +49,7 @@ progress = 545.2466
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_s2e4g")
 animation = &"bugFly"
-frame_progress = 0.52441853
+frame_progress = 0.015774975
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Flybug" unique_id=1152048787]
 position = Vector2(-1, 2)

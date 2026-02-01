@@ -3,6 +3,8 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
+var swordScene = preload("res://Scenes/sword.tscn")
+
 var leftMask
 var rightMask
 var hovering = false
@@ -18,17 +20,6 @@ func _ready() -> void:
 	global.player = self
 
 func _physics_process(delta: float) -> void:
-	#mask swapping inputs
-	if Input.is_action_just_pressed("swap_left"):
-		_mask_swap(false)#false for left hand
-	if Input.is_action_just_pressed("swap_right"):
-		_mask_swap(true)#true for right hand
-		
-	#Mask action inputs
-	if Input.is_action_pressed("mask_left"):
-		_mask_use(leftMask)
-	if Input.is_action_pressed("mask_right"):
-		_mask_use(rightMask)
 	
 	# Add the gravity.
 	if not is_on_floor() and hovering == false:
@@ -41,16 +32,13 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 		hovering = false
 
-	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("move_left", "move_right")
 	if direction:
 		velocity.x = direction * SPEED
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-	velocity.x += dashVector
-	dashVector = dashVector*0.8*delta
+		velocity.x = move_toward(velocity.x, 0, SPEED/18)
 	
 	if abs(velocity.y)>0:
 		animatedSprite.play("jump")
@@ -64,16 +52,40 @@ func _physics_process(delta: float) -> void:
 	if velocity.x > 0:
 		animatedSprite.flip_h = false
 	
+	#velocity.x += dashVector
+	position.x += dashVector
 	move_and_slide()
 	mask_updates()
+	dashVector = move_toward(dashVector,0,400*delta)
+	if is_on_wall():
+		dashVector = 0
+		
+	#mask swapping inputs
+	if Input.is_action_just_pressed("swap_left"):
+		_mask_swap(false)#false for left hand
+	if Input.is_action_just_pressed("swap_right"):
+		_mask_swap(true)#true for right hand
+		
+	#Mask action inputs
+	if Input.is_action_pressed("mask_left"):
+		_mask_use(leftMask, direction)
+	if Input.is_action_pressed("mask_right"):
+		_mask_use(rightMask, direction)
 
-func _mask_use(mask):#func is given the mask name, and does the corresponding action
+func _mask_use(mask, direction):#func is given the mask name, and does the corresponding action
 	if mask:
 		match mask.maskName:
+			"sword":
+				if $swordTimer.is_stopped():
+					var swordInstance = swordScene.instantiate()
+					add_child(swordInstance)
+					$swordTimer.start(.8)
+					if animatedSprite.flip_h == true:
+						swordInstance.scale.x = -1
 			"dash":
 				if $dashTimer.is_stopped():
-					dashVector = 800
-				$dashTimer.start()
+					dashVector = 50 * direction
+					$dashTimer.start()
 			"hover":
 				if hoverUsable == true:
 					hoverUsable = false
