@@ -1,5 +1,9 @@
 [gd_scene format=3 uid="uid://y36n04eqrhle"]
 
+[ext_resource type="Script" uid="uid://dp6xc5j8ikt4n" path="res://Scenes/key.gd" id="1_ut0wq"]
+
 [node name="Key" type="Sprite2D" unique_id=1249944711]
+z_index = -9
 texture_filter = 1
 scale = Vector2(3, 3)
+script = ExtResource("1_ut0wq")

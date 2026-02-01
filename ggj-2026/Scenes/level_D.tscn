@@ -1,0 +1,140 @@
+[gd_scene format=4 uid="uid://d315tafabguf0"]
+
+[ext_resource type="PackedScene" uid="uid://ugqxpghr70wf" path="res://Scenes/tileMapLayerTemplate.tscn" id="1_etxcv"]
+[ext_resource type="PackedScene" uid="uid://chbb8elixtrlj" path="res://Scenes/player_scene.tscn" id="2_mfwwm"]
+[ext_resource type="PackedScene" uid="uid://c4r0yj1ccfxw3" path="res://Scenes/override_camera.tscn" id="3_4buhe"]
+[ext_resource type="PackedScene" uid="uid://bxqmyalua77ja" path="res://Scenes/exitDoor.tscn" id="4_mnu4b"]
+[ext_resource type="PackedScene" uid="uid://y36n04eqrhle" path="res://Scenes/key.tscn" id="6_qlyc1"]
+[ext_resource type="Texture2D" uid="uid://eou2x38ecklr" path="res://Art/z_key.png" id="7_etxcv"]
+[ext_resource type="Texture2D" uid="uid://bqsb1y5yf5kxy" path="res://Art/u_key.png" id="8_mfwwm"]
+[ext_resource type="Texture2D" uid="uid://c72mdhpulnikp" path="res://Art/p_key.png" id="9_4buhe"]
+[ext_resource type="Texture2D" uid="uid://detcacdknx751" path="res://Art/v_key.png" id="10_mnu4b"]
+[ext_resource type="Texture2D" uid="uid://qvkgaoo53de6" path="res://Art/i_key.png" id="11_42rw5"]
+[ext_resource type="Texture2D" uid="uid://bwibqbtpqrdds" path="res://Art/o_key.png" id="12_0l5d7"]
+[ext_resource type="Texture2D" uid="uid://chnjtfc71qt8u" path="res://Art/x_key.png" id="13_0mw45"]
+[ext_resource type="Texture2D" uid="uid://dtpwqrdjcmoyx" path="res://Art/c_key.png" id="14_1rbim"]
+[ext_resource type="PackedScene" uid="uid://mxyhyqbwsr76" path="res://Scenes/mask.tscn" id="15_mvh23"]
+[ext_resource type="Texture2D" uid="uid://sivfh0d2thih" path="res://Art/HighJumpMask.png" id="16_kp5u6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e06xn"]
+size = Vector2(1216, 30.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e273j"]
+size = Vector2(32, 766)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tewmt"]
+size = Vector2(253, 62)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qlyc1"]
+size = Vector2(62, 63)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_42rw5"]
+size = Vector2(125, 62)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0l5d7"]
+size = Vector2(253, 261)
+
+[node name="level_D" type="Node2D" unique_id=741999394]
+
+[node name="TileMapLayer" parent="." unique_id=1006179694 instance=ExtResource("1_etxcv")]
+tile_map_data = PackedByteArray("AAD+/wAAAQACAAMAAAD9/wAAAQAAAAIAAAD8/wAAAQAEAAEAAAD7/wAAAQABAAAAAAD6/wAAAQABAAMAAAD5/wAAAQACAAMAAAD5/wEAAQACAAAAAAD6/wEAAQADAAAAAAD7/wEAAQAEAAAAAAD8/wEAAQAEAAEAAAD9/wEAAQAEAAEAAAD+/wEAAQACAAAAAAD+/wIAAQACAAAAAAD9/wIAAQAEAAAAAAD8/wIAAQAAAAEAAAD7/wIAAQAAAAEAAAD6/wIAAQABAAAAAAD5/wIAAQAAAAEAAAD5//7/AQAEAAEAAAD6//7/AQAEAAEAAAD7//7/AQAEAAEAAAD4//7/AQAEAAEAAAD4//z/AQABAAMAAAD5//z/AQACAAMAAAD6//z/AQABAAIAAAD7//z/AQADAAAAAAD8//z/AQAAAAMAAAD9//z/AQABAAMAAAD+//z/AQACAAMAAAD+//3/AQACAAAAAAD+//7/AQABAAAAAAD+////AQAEAAEAAAD9////AQABAAIAAAD8////AQAAAAIAAAD7////AQADAAAAAAD6////AQAAAAAAAAD5////AQAAAAMAAAD4////AQABAAIAAAD4//3/AQABAAAAAAD5//3/AQACAAAAAAD6//3/AQADAAAAAAD7//3/AQAEAAAAAAD8//3/AQAAAAAAAAD9//3/AQABAAAAAAD9//7/AQABAAIAAAD8//7/AQAAAAEAAAD4/wAAAQABAAMAAAD4/wEAAQABAAAAAAD4/wIAAQACAAAAAAD//wAAAQAAAAIAAAAAAAAAAQABAAIAAAABAAAAAQAAAAMAAAACAAAAAQABAAMAAAADAAAAAQACAAMAAAAEAAAAAQADAAAAAAAFAAAAAQAAAAAAAAAGAAAAAQAAAAAAAAAHAAAAAQAAAAAAAAAIAAAAAQAEAAEAAAD//wIAAQAEAAEAAAAAAAEAAQAEAAAAAAABAAEAAQAAAAAAAAACAAEAAQABAAAAAAD//wEAAQADAAAAAAAAAAIAAQAAAAEAAAABAAIAAQAAAAEAAAACAAIAAQABAAAAAAADAAIAAQABAAIAAAAEAAIAAQADAAAAAAAEAAEAAQADAAAAAAAFAAEAAQAEAAAAAAADAAEAAQACAAAAAAAFAAIAAQAAAAIAAAAGAAIAAQAEAAEAAAAGAAEAAQAEAAEAAAAHAAEAAQAEAAEAAAAHAAIAAQAEAAEAAAAIAAIAAQAEAAEAAAAIAAEAAQAEAAEAAAD///7/AQAEAAEAAAD///3/AQADAAAAAAD/////AQAEAAEAAAAAAP//AQABAAIAAAABAP//AQAAAAIAAAABAP7/AQAAAAEAAAACAP7/AQAAAAMAAAAAAP7/AQABAAAAAAABAP3/AQAAAAAAAAABAPz/AQAAAAMAAAAAAPz/AQADAAAAAAAAAP3/AQAEAAAAAAD///z/AQACAAAAAAACAP3/AQABAAAAAAADAP3/AQACAAAAAAADAPz/AQACAAMAAAACAPz/AQABAAMAAAADAP7/AQADAAAAAAAEAP7/AQAEAAAAAAADAP//AQACAAAAAAACAP//AQABAAIAAAAEAP//AQAEAAAAAAAFAP//AQACAAAAAAAGAP//AQAAAAIAAAAHAP//AQABAAIAAAAIAP//AQAEAAEAAAAIAP7/AQAEAAEAAAAIAP3/AQABAAAAAAAIAPz/AQACAAMAAAAHAPz/AQABAAMAAAAHAP3/AQABAAAAAAAHAP7/AQAEAAAAAAAGAP7/AQAAAAEAAAAFAP7/AQABAAMAAAAFAP3/AQAEAAAAAAAEAPz/AQABAAMAAAAEAP3/AQADAAAAAAAFAPz/AQACAAAAAAAGAPz/AQAAAAMAAAAGAP3/AQAAAAAAAAD4//j/AQACAAIAAAD5//j/AQACAAIAAAD6//j/AQACAAIAAAD6//n/AQADAAAAAAD5//n/AQACAAAAAAD4//n/AQABAAAAAAD4//r/AQAAAAMAAAD5//r/AQABAAMAAAD7//j/AQACAAIAAAD8//j/AQACAAIAAAD7//n/AQAEAAAAAAD6//r/AQABAAAAAAD5//v/AQAAAAEAAAD4//v/AQABAAIAAAD7//r/AQAAAAAAAAD8//r/AQAAAAEAAAD9//r/AQABAAAAAAD7//v/AQAAAAAAAAD6//v/AQAAAAMAAAD8//v/AQAAAAIAAAD9//v/AQABAAIAAAD+//v/AQABAAMAAAD///v/AQABAAAAAAAAAPv/AQAAAAMAAAABAPv/AQAAAAIAAAACAPv/AQABAAIAAAADAPv/AQAEAAAAAAAEAPv/AQACAAMAAAAFAPv/AQADAAAAAAAGAPv/AQAAAAIAAAAHAPv/AQABAAIAAAAIAPr/AQAAAAAAAAAIAPv/AQAAAAEAAAAIAPn/AQACAAAAAAAIAPj/AQACAAIAAAAHAPj/AQACAAIAAAAGAPj/AQACAAIAAAAFAPj/AQACAAIAAAAEAPj/AQACAAIAAAADAPj/AQACAAIAAAACAPj/AQACAAIAAAABAPj/AQACAAIAAAAAAPj/AQACAAIAAAD///j/AQACAAIAAAD+//j/AQACAAIAAAD9//j/AQACAAIAAAD9//n/AQABAAAAAAD8//n/AQAAAAAAAAD+//n/AQACAAAAAAD///n/AQADAAAAAAAAAPn/AQAEAAAAAAABAPn/AQAAAAAAAAACAPn/AQABAAAAAAADAPn/AQACAAAAAAAEAPn/AQADAAAAAAAFAPn/AQAEAAAAAAAGAPn/AQAAAAAAAAAHAPn/AQABAAAAAAAHAPr/AQAAAAEAAAAGAPr/AQAAAAEAAAAFAPr/AQAAAAMAAAAEAPr/AQAAAAAAAAADAPr/AQAAAAAAAAACAPr/AQABAAIAAAABAPr/AQAAAAEAAAAAAPr/AQADAAAAAAD///r/AQAAAAAAAAD+//r/AQAEAAAAAAAKAPj/AQACAAIAAAAKAPn/AQACAAIAAAAKAPr/AQACAAIAAAAKAPv/AQACAAIAAAAKAPz/AQACAAIAAAAKAP3/AQACAAIAAAAKAP7/AQACAAIAAAAKAP//AQACAAIAAAAKAAAAAQACAAIAAAAKAAEAAQACAAIAAAAKAAIAAQACAAIAAAAJAPj/AQACAAIAAAAJAAAAAQAEAAEAAAAJAAEAAQAEAAEAAAAJAAIAAQAEAAEAAAAJAPn/AQADAAAAAAAJAPr/AQAAAAMAAAAJAPv/AQACAAAAAAAJAPz/AQABAAAAAAAJAP3/AQADAAAAAAAJAP7/AQAEAAEAAAAJAP//AQAEAAEAAAD2//j/AQACAAIAAAD2//n/AQACAAIAAAD2//r/AQACAAIAAAD2//v/AQACAAIAAAD2//z/AQACAAIAAAD2//3/AQACAAIAAAD2//7/AQACAAIAAAD2////AQACAAIAAAD2/wAAAQACAAIAAAD2/wEAAQACAAIAAAD2/wIAAQACAAIAAAAKAAMAAQACAAIAAAAJAAMAAQAEAAEAAAAIAAMAAQAEAAEAAAAHAAMAAQAEAAEAAAAGAAMAAQAEAAEAAAAFAAMAAQABAAMAAAAEAAMAAQABAAAAAAADAAMAAQABAAIAAAACAAMAAQABAAIAAAABAAMAAQAAAAIAAAAAAAMAAQACAAAAAAD//wMAAQAEAAEAAAD+/wMAAQAEAAEAAAD9/wMAAQABAAIAAAD8/wMAAQAAAAIAAAD7/wMAAQABAAAAAAD6/wMAAQAAAAAAAAD5/wMAAQABAAMAAAD4/wMAAQABAAIAAAD3/wMAAQAAAAIAAAD2/wMAAQACAAIAAAD3/wAAAQAAAAMAAAD3/wEAAQAAAAAAAAD3/wIAAQAAAAEAAAD3////AQAAAAIAAAD3//7/AQAAAAEAAAD3//3/AQAAAAAAAAD3//z/AQAAAAMAAAD3//v/AQAAAAIAAAD3//r/AQAAAAEAAAD3//n/AQAAAAAAAAD3//j/AQACAAIAAAD2/wQAAQACAAIAAAAKAAQAAQACAAIAAAAJAAQAAQADAAEAAAAIAAQAAQACAAEAAAAHAAQAAQACAAEAAAAGAAQAAQACAAEAAAAFAAQAAQADAAEAAAAEAAQAAQACAAEAAAADAAQAAQACAAEAAAACAAQAAQACAAEAAAABAAQAAQADAAEAAAAAAAQAAQACAAEAAAD//wQAAQACAAEAAAD+/wQAAQACAAEAAAD9/wQAAQADAAEAAAD8/wQAAQACAAEAAAD7/wQAAQACAAEAAAD6/wQAAQACAAEAAAD5/wQAAQACAAEAAAD4/wQAAQADAAEAAAD3/wQAAQACAAEAAAA=")
+
+[node name="playerScene" parent="." unique_id=1882959398 instance=ExtResource("2_mfwwm")]
+position = Vector2(-240, 246)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1645688842]
+
+[node name="floor" type="CollisionShape2D" parent="StaticBody2D" unique_id=1180986815]
+position = Vector2(32, 271.25)
+shape = SubResource("RectangleShape2D_e06xn")
+
+[node name="left_wall" type="CollisionShape2D" parent="StaticBody2D" unique_id=1223914267]
+position = Vector2(-592, -96)
+shape = SubResource("RectangleShape2D_e273j")
+
+[node name="ceiling" type="CollisionShape2D" parent="StaticBody2D" unique_id=1716472318]
+position = Vector2(32, -463)
+shape = SubResource("RectangleShape2D_e06xn")
+
+[node name="right" type="CollisionShape2D" parent="StaticBody2D" unique_id=610866304]
+position = Vector2(656, -95)
+shape = SubResource("RectangleShape2D_e273j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1842333032]
+position = Vector2(-384.5, -96)
+shape = SubResource("RectangleShape2D_tewmt")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1600214454]
+position = Vector2(-32, -95.5)
+shape = SubResource("RectangleShape2D_qlyc1")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1819080080]
+position = Vector2(-223, 34)
+shape = SubResource("RectangleShape2D_qlyc1")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=392296586]
+position = Vector2(-32, 161)
+shape = SubResource("RectangleShape2D_qlyc1")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=767026239]
+position = Vector2(-64.5, -32)
+shape = SubResource("RectangleShape2D_42rw5")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=967804279]
+position = Vector2(-192, 96)
+shape = SubResource("RectangleShape2D_42rw5")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=1406350000]
+position = Vector2(-64, 224)
+shape = SubResource("RectangleShape2D_42rw5")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D" unique_id=881183738]
+position = Vector2(512, 195.5)
+shape = SubResource("RectangleShape2D_0l5d7")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D" unique_id=2078342204]
+position = Vector2(639.5, 3)
+shape = SubResource("RectangleShape2D_0l5d7")
+
+[node name="overrideCamera" parent="." unique_id=1451669185 instance=ExtResource("3_4buhe")]
+position = Vector2(32, -80)
+
+[node name="ExitDoor" parent="." unique_id=570306949 instance=ExtResource("4_mnu4b")]
+position = Vector2(577, -175)
+
+[node name="Key" parent="." unique_id=1249944711 instance=ExtResource("6_qlyc1")]
+position = Vector2(-485, -372)
+texture = ExtResource("7_etxcv")
+
+[node name="Key2" parent="." unique_id=1832332694 instance=ExtResource("6_qlyc1")]
+position = Vector2(-485, -282)
+texture = ExtResource("8_mfwwm")
+
+[node name="Key3" parent="." unique_id=804418155 instance=ExtResource("6_qlyc1")]
+position = Vector2(-299, -284)
+texture = ExtResource("9_4buhe")
+
+[node name="Key4" parent="." unique_id=1176829512 instance=ExtResource("6_qlyc1")]
+position = Vector2(-298, -374)
+texture = ExtResource("10_mnu4b")
+
+[node name="Key5" parent="." unique_id=1939262690 instance=ExtResource("6_qlyc1")]
+position = Vector2(228, -346)
+texture = ExtResource("11_42rw5")
+
+[node name="Key6" parent="." unique_id=1169972807 instance=ExtResource("6_qlyc1")]
+position = Vector2(356, -348)
+texture = ExtResource("12_0l5d7")
+
+[node name="Key7" parent="." unique_id=829108833 instance=ExtResource("6_qlyc1")]
+position = Vector2(229, -240)
+texture = ExtResource("13_0mw45")
+
+[node name="Key8" parent="." unique_id=1725616592 instance=ExtResource("6_qlyc1")]
+position = Vector2(353, -242)
+texture = ExtResource("14_1rbim")
+
+[node name="Mask" parent="." unique_id=2009403124 instance=ExtResource("15_mvh23")]
+position = Vector2(-385, -157)
+maskName = "highjump"
+sprite = ExtResource("16_kp5u6")
