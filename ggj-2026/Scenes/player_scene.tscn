@@ -105,6 +105,8 @@ position = Vector2(0, -20)
 shape = SubResource("CircleShape2D_e13mc")
 debug_color = Color(0.1882353, 0.8117647, 0, 0.105882354)
 
+[node name="armPivotgMarker" type="Marker2D" parent="." unique_id=368983676]
+
 [node name="leftMarker2d" type="Marker2D" parent="." unique_id=179324584]
 position = Vector2(-30, -50)
 
@@ -128,7 +130,7 @@ sprite_frames = SubResource("SpriteFrames_jjw6a")
 animation = &"jump"
 frame_progress = 0.95120764
 
-[node name="hitboxArea2D" type="Area2D" parent="." unique_id=807754738]
+[node name="hitboxArea2D" type="Area2D" parent="." unique_id=807754738 groups=["playerHitbox"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitboxArea2D" unique_id=2039556156]
 position = Vector2(0, -32)

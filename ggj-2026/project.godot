@@ -32,6 +32,7 @@ window/size/viewport_height=800
 
 mask=""
 enemy=""
+playerHitbox=""
 
 [input]
 
