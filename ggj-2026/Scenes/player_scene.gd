@@ -5,7 +5,8 @@ const JUMP_VELOCITY = -400.0
 
 var leftMask
 var rightMask
-var hovering
+var hovering = false
+var hoverUsable = false
 @onready var leftMarker = $leftMarker2d
 @onready var rightMarker = $rightMarker2d
 @onready var animatedSprite = $AnimatedSprite2D
@@ -28,12 +29,15 @@ func _physics_process(delta: float) -> void:
 		_mask_use(rightMask)
 	
 	# Add the gravity.
-	if not is_on_floor():
+	if not is_on_floor() and hovering == false:
 		velocity += get_gravity() * delta
-
+	
+	if is_on_floor():
+		hoverUsable = true
 	# Handle jump.
 	if Input.is_action_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		hovering = false
 
 	
 	# Get the input direction and handle the movement/deceleration.
@@ -63,10 +67,15 @@ func _mask_use(mask):#func is given the mask name, and does the corresponding ac
 	if mask:
 		match mask.maskName:
 			"hover":
-				hovering = true
+				if hoverUsable == true:
+					hoverUsable = false
+					hovering = true
+					velocity.y = 0
+					$hoverTimer.start()
 			"highjump":
 				if is_on_floor():
 					velocity.y = -600
+					hovering = false
 			"none":
 				pass
 			"hover":
@@ -115,3 +124,7 @@ func _on_hitbox_area_2d_area_entered(area: Area2D) -> void:
 func _on_hitbox_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemy"):
 		die()
+
+
+func _on_hover_timer_timeout() -> void:
+	hovering = false

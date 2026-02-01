@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cn827jiuk1je1" path="res://Scenes/player_scene.gd" id="1_7cibt"]
 [ext_resource type="Texture2D" uid="uid://c5xotsu2qo4lo" path="res://Art/playerStandIn.png" id="1_8tj53"]
+[ext_resource type="Texture2D" uid="uid://cqlhm0txn4bov" path="res://Art/bird_hand.png" id="3_f11s3"]
 [ext_resource type="Texture2D" uid="uid://cwjyo8k7jop5d" path="res://Art/bird_stand_sheet.png" id="3_q0huo"]
 [ext_resource type="Texture2D" uid="uid://p8l41xlcp8u3" path="res://Art/bird_jump.png" id="4_f11s3"]
 [ext_resource type="Texture2D" uid="uid://ck0fabbylbflj" path="res://Art/bird_run_sheet.png" id="4_oirxf"]
@@ -103,8 +104,18 @@ debug_color = Color(0.1882353, 0.8117647, 0, 0.105882354)
 [node name="leftMarker2d" type="Marker2D" parent="." unique_id=179324584]
 position = Vector2(-30, -50)
 
+[node name="Sprite2D" type="Sprite2D" parent="leftMarker2d" unique_id=340666440]
+texture_filter = 1
+position = Vector2(5, 0)
+texture = ExtResource("3_f11s3")
+
 [node name="rightMarker2d" type="Marker2D" parent="." unique_id=1690473776]
 position = Vector2(30, -50)
+
+[node name="Sprite2D" type="Sprite2D" parent="rightMarker2d" unique_id=1759411604]
+texture_filter = 1
+position = Vector2(-5, 0)
+texture = ExtResource("3_f11s3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1099136709]
 position = Vector2(0, -32)
@@ -118,5 +129,9 @@ frame_progress = 0.95120764
 position = Vector2(0, -39)
 shape = SubResource("CircleShape2D_oirxf")
 
+[node name="hoverTimer" type="Timer" parent="." unique_id=1157289607]
+one_shot = true
+
 [connection signal="area_entered" from="hitboxArea2D" to="." method="_on_hitbox_area_2d_area_entered"]
 [connection signal="body_entered" from="hitboxArea2D" to="." method="_on_hitbox_area_2d_body_entered"]
+[connection signal="timeout" from="hoverTimer" to="." method="_on_hover_timer_timeout"]
