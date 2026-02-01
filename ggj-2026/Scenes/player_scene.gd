@@ -13,8 +13,8 @@ var hoverUsable = false
 var dashVector = 0
 
 @onready var defaultMarkerPosition = $armPivotMarker.position
-var leftMarkerPosition = Vector2(22,-32)
-var rightMarkerPosition = Vector2(-22,-32)
+var leftMarkerPosition = Vector2(18,-32)
+var rightMarkerPosition = Vector2(-18,-32)
 var leftMarkerTilt = 12.0
 var rightMarkerTilt = -12.0
 var maskMode = 0
@@ -194,12 +194,18 @@ func maskModeUpdate():
 	if maskMode == 0:
 		pivot.position = lerp(pivot.position, defaultMarkerPosition, armSpeed)
 		pivot.rotation_degrees = lerp(pivot.rotation_degrees, 0.0, armSpeed)
+		pivot.scale = lerp(pivot.scale, Vector2(1,1), armSpeed)
+		$armPivotMarker/leftMarker2d/Sprite2D.z_index = 0
+		$armPivotMarker/rightMarker2d/Sprite2D.z_index = 0
 	if maskMode == 1:
 		pivot.position = lerp(pivot.position, rightMarkerPosition, armSpeed)
 		pivot.rotation_degrees = lerp(pivot.rotation_degrees, rightMarkerTilt, armSpeed)
+		pivot.scale = lerp(pivot.scale, Vector2(0.6,0.6), armSpeed)
+		$armPivotMarker/leftMarker2d/Sprite2D.z_index = 1
+		$armPivotMarker/rightMarker2d/Sprite2D.z_index = 1
 	if maskMode == -1:
 		pivot.position = lerp(pivot.position, leftMarkerPosition, armSpeed)
 		pivot.rotation_degrees = lerp(pivot.rotation_degrees, leftMarkerTilt, armSpeed)
-		
-		
-		
+		pivot.scale = lerp(pivot.scale, Vector2(0.6,0.6), armSpeed)
+		$armPivotMarker/leftMarker2d/Sprite2D.z_index = 1
+		$armPivotMarker/rightMarker2d/Sprite2D.z_index = 1
