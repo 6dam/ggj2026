@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
+const POUND_VELOCITY = 1000
 
 var swordScene = preload("res://Scenes/sword.tscn")
 
@@ -10,14 +11,16 @@ var rightMask
 var hovering = false
 var hoverUsable = false
 var dashVector = 0
+
 @onready var leftMarker = $leftMarker2d
 @onready var rightMarker = $rightMarker2d
 @onready var animatedSprite = $AnimatedSprite2D
 @onready var sludgeTimer = $sludgeTimer
 
+
 func _ready() -> void:
-	pass
 	global.player = self
+	global.poundReady = true
 
 func _physics_process(delta: float) -> void:
 	
@@ -27,6 +30,7 @@ func _physics_process(delta: float) -> void:
 	
 	if is_on_floor():
 		hoverUsable = true
+		global.poundReady = false
 	# Handle jump.
 	if Input.is_action_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
@@ -104,6 +108,9 @@ func _mask_use(mask, direction):#func is given the mask name, and does the corre
 				velocity.y = JUMP_VELOCITY
 			"sludge":
 				shootSludge(mask)
+			"groundpound":
+				velocity.y = POUND_VELOCITY
+				global.poundReady = true
 
 func _mask_swap(rightHanded):
 	var closestMask = get_closest_mask()
@@ -160,3 +167,8 @@ func shootSludge(mask):
 			sludgeInst.linear_velocity = Vector2(500,-300)
 		sludgeTimer.start(1)
 	
+
+
+func _on_ground_pound_hitbox_area_entered(area: Area2D) -> void:
+	if area.is_in_group("enemy") and global.poundReady:
+		area.owner.queue_free()

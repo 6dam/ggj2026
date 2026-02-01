@@ -80,6 +80,9 @@ animations = [{
 radius = 25.0
 height = 64.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f11s3"]
+size = Vector2(148, 49.5)
+
 [node name="playerScene" type="CharacterBody2D" unique_id=1882959398]
 script = ExtResource("1_7cibt")
 
@@ -145,6 +148,13 @@ one_shot = true
 wait_time = 4.0
 one_shot = true
 
+[node name="groundPoundHitbox" type="Area2D" parent="." unique_id=1974726465]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="groundPoundHitbox" unique_id=1984451110]
+position = Vector2(0, 31.75)
+shape = SubResource("RectangleShape2D_f11s3")
+
 [connection signal="area_entered" from="hitboxArea2D" to="." method="_on_hitbox_area_2d_area_entered"]
 [connection signal="body_entered" from="hitboxArea2D" to="." method="_on_hitbox_area_2d_body_entered"]
 [connection signal="timeout" from="hoverTimer" to="." method="_on_hover_timer_timeout"]
+[connection signal="area_entered" from="groundPoundHitbox" to="." method="_on_ground_pound_hitbox_area_entered"]
