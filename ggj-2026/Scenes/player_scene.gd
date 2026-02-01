@@ -128,3 +128,4 @@ func _on_hitbox_area_2d_body_entered(body: Node2D) -> void:
 
 func _on_hover_timer_timeout() -> void:
 	hovering = false
+	

@@ -132,6 +132,8 @@ shape = SubResource("CircleShape2D_oirxf")
 [node name="hoverTimer" type="Timer" parent="." unique_id=1157289607]
 one_shot = true
 
+[node name="sludgeTimer" type="Timer" parent="." unique_id=316196151]
+
 [connection signal="area_entered" from="hitboxArea2D" to="." method="_on_hitbox_area_2d_area_entered"]
 [connection signal="body_entered" from="hitboxArea2D" to="." method="_on_hitbox_area_2d_body_entered"]
 [connection signal="timeout" from="hoverTimer" to="." method="_on_hover_timer_timeout"]

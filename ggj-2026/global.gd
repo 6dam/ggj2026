@@ -3,7 +3,7 @@ extends Node
 var player
 var level
 var main
-#var sludge_ball = preload()
+#var sludge_ball = preload("res://Scenes/sludgeball.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
