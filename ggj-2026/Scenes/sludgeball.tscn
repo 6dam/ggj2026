@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c3lsf6xjsy4gl"]
+
+[ext_resource type="Texture2D" uid="uid://co2fbimxrv0dt" path="res://Art/sludge_ball.png" id="1_mgnsw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ddwl1"]
+radius = 15.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bfq81"]
+radius = 16.03122
+
+[node name="sludgeball" type="Node2D" unique_id=89828307]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=704572483]
+texture = ExtResource("1_mgnsw")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=167470229]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1332567793]
+shape = SubResource("CircleShape2D_ddwl1")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=208918211]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=174248591]
+shape = SubResource("CircleShape2D_bfq81")
