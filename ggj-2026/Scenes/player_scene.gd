@@ -113,7 +113,7 @@ func mask_updates():
 		rightMask.global_position = rightMarker.global_position
 
 func die():
-	global.main.load_level(global.main.level1)
+	global.main.load_level(global.main.level2)
 
 
 func _on_hitbox_area_2d_area_entered(area: Area2D) -> void:

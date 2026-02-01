@@ -27,6 +27,9 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n80vc"]
 radius = 8.375
+height = 58.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l5dqu"]
 height = 64.0
 
 [node name="worm" type="CharacterBody2D" unique_id=1699369177 groups=["enemy"]]
@@ -34,17 +37,23 @@ script = ExtResource("1_l5dqu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2144909496]
 texture_filter = 1
+position = Vector2(0, -32)
 sprite_frames = SubResource("SpriteFrames_x1856")
 animation = &"walk"
-frame = 1
-frame_progress = 0.03925405
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=971151785]
-position = Vector2(0, 22.625)
+position = Vector2(0, -8.375)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_n80vc")
 
 [node name="Timer" type="Timer" parent="." unique_id=1241034522]
 autostart = true
+
+[node name="hitboxArea2D" type="Area2D" parent="." unique_id=716176470 groups=["enemy"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitboxArea2D" unique_id=1518289376]
+position = Vector2(0, -10)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_l5dqu")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

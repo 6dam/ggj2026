@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://ugqxpghr70wf" path="res://Scenes/tileMapLayerTemplate.tscn" id="5_v36qu"]
 [ext_resource type="Texture2D" uid="uid://dchxp608n3o3y" path="res://Art/hoverMask.png" id="6_055b2"]
 [ext_resource type="PackedScene" uid="uid://c4r0yj1ccfxw3" path="res://Scenes/override_camera.tscn" id="6_cggpd"]
+[ext_resource type="PackedScene" uid="uid://8wugv7be35u0" path="res://Scenes/worm.tscn" id="7_055b2"]
+[ext_resource type="PackedScene" uid="uid://pxa6go5pfr6s" path="res://Scenes/flybug.tscn" id="8_2mgoq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v36qu"]
 size = Vector2(1187, 192)
@@ -82,3 +84,13 @@ position = Vector2(32, -80)
 position = Vector2(-65, -283)
 maskName = "hover"
 sprite = ExtResource("6_055b2")
+
+[node name="worm" parent="." unique_id=1699369177 instance=ExtResource("7_055b2")]
+position = Vector2(-323, -144)
+
+[node name="worm2" parent="." unique_id=1303189533 instance=ExtResource("7_055b2")]
+position = Vector2(-159, -18)
+
+[node name="Flybug" parent="." unique_id=1963777610 instance=ExtResource("8_2mgoq")]
+position = Vector2(341, -219)
+speed = 90

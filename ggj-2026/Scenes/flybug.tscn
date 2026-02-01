@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://pxa6go5pfr6s"]
+
+[ext_resource type="Script" uid="uid://jqwwubvdjurc" path="res://Scenes/flybug.gd" id="1_2yigu"]
+[ext_resource type="Texture2D" uid="uid://dtq33w0mhtitp" path="res://Art/bug.png" id="1_17pq3"]
+
+[sub_resource type="Curve2D" id="Curve2D_17pq3"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 13, -11, 0, 0, 0, 0, 65, -16, 0, 0, 0, 0, 97, -8, 0, 0, 0, 0, 32, 3, 0, 0, 0, 0, -41, 7, 0, 0, 0, 0, -76, 1, 0, 0, 0, 0, -104, -3, 0, 0, 0, 0, -28, -5, 0, 0, 0, 0, 13, -11)
+}
+point_count = 9
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2yigu"]
+atlas = ExtResource("1_17pq3")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lv4mr"]
+atlas = ExtResource("1_17pq3")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s2e4g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2yigu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lv4mr")
+}],
+"loop": true,
+"name": &"bugFly",
+"speed": 4.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_17pq3"]
+radius = 23.0
+
+[node name="bug" type="Path2D" unique_id=708398281]
+curve = SubResource("Curve2D_17pq3")
+script = ExtResource("1_2yigu")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="." unique_id=625500352]
+position = Vector2(13, -11)
+rotation = -0.14531
+progress = 545.2466
+
+[node name="Flybug" type="Area2D" parent="PathFollow2D" unique_id=1963777610 groups=["enemy"]]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PathFollow2D/Flybug" unique_id=2099755033]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_s2e4g")
+animation = &"bugFly"
+frame_progress = 0.52441853
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Flybug" unique_id=1152048787]
+position = Vector2(-1, 2)
+shape = SubResource("CircleShape2D_17pq3")
+debug_color = Color(0.99293536, 0, 0.25154528, 0.41960785)

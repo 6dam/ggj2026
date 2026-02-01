@@ -76,8 +76,9 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_oirxf"]
-radius = 26.019224
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f11s3"]
+radius = 25.0
+height = 64.0
 
 [node name="playerScene" type="CharacterBody2D" unique_id=1882959398]
 script = ExtResource("1_7cibt")
@@ -126,8 +127,8 @@ frame_progress = 0.95120764
 [node name="hitboxArea2D" type="Area2D" parent="." unique_id=807754738]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitboxArea2D" unique_id=2039556156]
-position = Vector2(0, -39)
-shape = SubResource("CircleShape2D_oirxf")
+position = Vector2(0, -32)
+shape = SubResource("CapsuleShape2D_f11s3")
 
 [node name="hoverTimer" type="Timer" parent="." unique_id=1157289607]
 one_shot = true
