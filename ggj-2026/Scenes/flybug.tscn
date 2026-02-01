@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dtq33w0mhtitp" path="res://Art/bug.png" id="1_17pq3"]
 
 [sub_resource type="Curve2D" id="Curve2D_17pq3"]
+resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 13, -11, 0, 0, 0, 0, 65, -16, 0, 0, 0, 0, 97, -8, 0, 0, 0, 0, 32, 3, 0, 0, 0, 0, -41, 7, 0, 0, 0, 0, -76, 1, 0, 0, 0, 0, -104, -3, 0, 0, 0, 0, -28, -5, 0, 0, 0, 0, 13, -11)
 }

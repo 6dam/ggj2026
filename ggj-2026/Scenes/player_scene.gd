@@ -146,7 +146,7 @@ func _mask_swap(rightHanded):
 		leftMask = closestMask
 		print("Left Swap")
 	if $beepSound.playing == false:
-		$beepSound.playa()
+		$beepSound.play()
 
 func get_closest_mask():
 	var overlapArray = $maskDetectorArea2D.get_overlapping_areas()

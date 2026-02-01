@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://tggkux81jgoq" path="res://Art/swordMask.png" id="10_42uki"]
 [ext_resource type="Texture2D" uid="uid://c7ih1qk4hcfkf" path="res://Art/imp.png" id="11_t7v2y"]
 [ext_resource type="PackedScene" uid="uid://bxqmyalua77ja" path="res://Scenes/exitDoor.tscn" id="12_ait6c"]
-[ext_resource type="PackedScene" uid="uid://b184flniqcbv4" path="res://Scenes/level_A.tscn" id="13_vcilj"]
+[ext_resource type="PackedScene" path="res://Scenes/level_A.tscn" id="13_vcilj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v36qu"]
 size = Vector2(1271, 192)
@@ -34,6 +34,13 @@ size = Vector2(64, 447)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_42uki"]
 size = Vector2(64, 447)
+
+[sub_resource type="Curve2D" id="Curve2D_vcilj"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 13, -11, 0, 0, 0, 0, 65, -16, 0, 0, 0, 0, 97, -8, 0, 0, 0, 0, 32, 3, 0, 0, 0, 0, -41, 7, 0, 0, 0, 0, -76, 1, 0, 0, 0, 0, -104, -3, 0, 0, 0, 0, -28, -5, 0, 0, 0, 0, 13, -11)
+}
+point_count = 9
 
 [node name="level_2" type="Node2D" unique_id=741999394]
 
@@ -95,6 +102,7 @@ position = Vector2(-323, -144)
 
 [node name="Flybug" parent="." unique_id=1963777610 instance=ExtResource("8_2mgoq")]
 position = Vector2(341, -219)
+curve = SubResource("Curve2D_vcilj")
 speed = 90
 
 [node name="Mask" parent="." unique_id=1990867742 instance=ExtResource("2_12fag")]
@@ -102,7 +110,7 @@ position = Vector2(368, -160)
 maskName = "dash"
 sprite = ExtResource("9_uhnj4")
 
-[node name="Mask2" parent="." unique_id=1389874928 instance=ExtResource("2_12fag")]
+[node name="swordMask" parent="." unique_id=1389874928 instance=ExtResource("2_12fag")]
 position = Vector2(-20, -37)
 maskName = "sword"
 sprite = ExtResource("10_42uki")

@@ -8,7 +8,9 @@ texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 4:4/0 = 0
 1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 3:3/0 = 0
 4:3/0 = 0
 3:4/0 = 0
@@ -22,19 +24,26 @@ texture_region_size = Vector2i(64, 64)
 1:4/0 = 0
 2:0/0 = 0
 2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 2:3/0 = 0
 2:4/0 = 0
 3:0/0 = 0
 3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 4:0/0 = 0
 4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 
 [sub_resource type="TileSet" id="TileSet_u3lqt"]
 tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_jir5x")
 
 [node name="TileMapLayer" type="TileMapLayer" unique_id=1006179694]
 z_index = -10
+texture_filter = 1
 tile_set = SubResource("TileSet_u3lqt")
