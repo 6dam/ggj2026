@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://8wugv7be35u0" path="res://Scenes/worm.tscn" id="5_wrinw"]
 [ext_resource type="Texture2D" uid="uid://cqiw0plurn45x" path="res://Art/sludge.png" id="6_evi0p"]
 [ext_resource type="PackedScene" uid="uid://pxa6go5pfr6s" path="res://Scenes/flybug.tscn" id="7_lsmp6"]
+[ext_resource type="PackedScene" uid="uid://6q4bs1qmi54m" path="res://Scenes/butterfly.tscn" id="8_xrdnt"]
 
 [node name="level1" type="Node2D" unique_id=997325918]
 
@@ -63,3 +64,6 @@ sprite = ExtResource("6_evi0p")
 
 [node name="bug" parent="." unique_id=708398281 instance=ExtResource("7_lsmp6")]
 position = Vector2(-763, 131)
+
+[node name="butterfly" parent="." unique_id=654521106 instance=ExtResource("8_xrdnt")]
+position = Vector2(-945, 29)

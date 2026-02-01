@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://6q4bs1qmi54m"]
+
+[ext_resource type="Script" uid="uid://bj7a31274syg3" path="res://Scenes/butterfly.gd" id="1_c6ltt"]
+[ext_resource type="Texture2D" uid="uid://cthoom1t3wpxp" path="res://Art/butterfly_flap.png" id="1_lnvyh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6ltt"]
+atlas = ExtResource("1_lnvyh")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3apy"]
+atlas = ExtResource("1_lnvyh")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_htf8t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6ltt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x3apy")
+}],
+"loop": true,
+"name": &"flap",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fwxr8"]
+size = Vector2(50, 51)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lcpvf"]
+radius = 7.0
+height = 42.0
+
+[node name="butterfly" type="CharacterBody2D" unique_id=654521106 groups=["enemy"]]
+script = ExtResource("1_c6ltt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1416036343]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_htf8t")
+animation = &"flap"
+frame_progress = 0.11478322
+
+[node name="Area2D" type="Area2D" parent="." unique_id=362749911 groups=["enemy"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=960369941]
+shape = SubResource("RectangleShape2D_fwxr8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1082167223]
+shape = SubResource("CapsuleShape2D_lcpvf")
