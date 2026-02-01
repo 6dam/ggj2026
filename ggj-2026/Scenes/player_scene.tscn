@@ -107,7 +107,7 @@ position = Vector2(-30, -50)
 
 [node name="Sprite2D" type="Sprite2D" parent="leftMarker2d" unique_id=340666440]
 texture_filter = 1
-position = Vector2(5, 0)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_f11s3")
 
 [node name="rightMarker2d" type="Marker2D" parent="." unique_id=1690473776]
@@ -115,10 +115,11 @@ position = Vector2(30, -50)
 
 [node name="Sprite2D" type="Sprite2D" parent="rightMarker2d" unique_id=1759411604]
 texture_filter = 1
-position = Vector2(-5, 0)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_f11s3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1099136709]
+texture_filter = 1
 position = Vector2(0, -32)
 sprite_frames = SubResource("SpriteFrames_jjw6a")
 animation = &"jump"
@@ -134,6 +135,10 @@ shape = SubResource("CapsuleShape2D_f11s3")
 one_shot = true
 
 [node name="sludgeTimer" type="Timer" parent="." unique_id=316196151]
+one_shot = true
+
+[node name="dashTimer" type="Timer" parent="." unique_id=461954857]
+wait_time = 0.75
 one_shot = true
 
 [connection signal="area_entered" from="hitboxArea2D" to="." method="_on_hitbox_area_2d_area_entered"]

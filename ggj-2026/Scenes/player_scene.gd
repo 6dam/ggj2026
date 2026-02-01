@@ -7,6 +7,7 @@ var leftMask
 var rightMask
 var hovering = false
 var hoverUsable = false
+var dashVector = 0
 @onready var leftMarker = $leftMarker2d
 @onready var rightMarker = $rightMarker2d
 @onready var animatedSprite = $AnimatedSprite2D
@@ -48,7 +49,9 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+	velocity.x += dashVector
+	dashVector = dashVector*0.8*delta
+	
 	if abs(velocity.y)>0:
 		animatedSprite.play("jump")
 	elif abs(velocity.x) > 0:
@@ -60,13 +63,17 @@ func _physics_process(delta: float) -> void:
 		animatedSprite.flip_h = true
 	if velocity.x > 0:
 		animatedSprite.flip_h = false
-
+	
 	move_and_slide()
 	mask_updates()
 
 func _mask_use(mask):#func is given the mask name, and does the corresponding action
 	if mask:
 		match mask.maskName:
+			"dash":
+				if $dashTimer.is_stopped():
+					dashVector = 800
+				$dashTimer.start()
 			"hover":
 				if hoverUsable == true:
 					hoverUsable = false
