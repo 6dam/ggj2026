@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cqiw0plurn45x" path="res://Art/sludge.png" id="6_evi0p"]
 [ext_resource type="PackedScene" uid="uid://pxa6go5pfr6s" path="res://Scenes/flybug.tscn" id="7_lsmp6"]
 [ext_resource type="PackedScene" uid="uid://6q4bs1qmi54m" path="res://Scenes/butterfly.tscn" id="8_xrdnt"]
+[ext_resource type="Texture2D" uid="uid://c7ih1qk4hcfkf" path="res://Art/imp.png" id="9_wrinw"]
 
 [node name="level1" type="Node2D" unique_id=997325918]
 
@@ -67,3 +68,8 @@ position = Vector2(-763, 131)
 
 [node name="butterfly" parent="." unique_id=654521106 instance=ExtResource("8_xrdnt")]
 position = Vector2(-945, 29)
+
+[node name="Mask" parent="." unique_id=1165433615 instance=ExtResource("2_evi0p")]
+position = Vector2(-342, 126)
+maskName = "groundpound"
+sprite = ExtResource("9_wrinw")
