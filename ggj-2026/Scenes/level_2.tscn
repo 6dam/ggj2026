@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://pxa6go5pfr6s" path="res://Scenes/flybug.tscn" id="8_2mgoq"]
 [ext_resource type="Texture2D" uid="uid://dd7c3ha8o1od2" path="res://Art/dashMask.png" id="9_uhnj4"]
 [ext_resource type="Texture2D" uid="uid://tggkux81jgoq" path="res://Art/swordMask.png" id="10_42uki"]
+[ext_resource type="Texture2D" uid="uid://cqiw0plurn45x" path="res://Art/sludge.png" id="10_bl0du"]
 [ext_resource type="Texture2D" uid="uid://c7ih1qk4hcfkf" path="res://Art/imp.png" id="11_t7v2y"]
 [ext_resource type="PackedScene" uid="uid://bxqmyalua77ja" path="res://Scenes/exitDoor.tscn" id="12_ait6c"]
 [ext_resource type="PackedScene" path="res://Scenes/level_A.tscn" id="13_vcilj"]
@@ -35,7 +36,7 @@ size = Vector2(64, 447)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_42uki"]
 size = Vector2(64, 447)
 
-[sub_resource type="Curve2D" id="Curve2D_vcilj"]
+[sub_resource type="Curve2D" id="Curve2D_q0ycs"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 13, -11, 0, 0, 0, 0, 65, -16, 0, 0, 0, 0, 97, -8, 0, 0, 0, 0, 32, 3, 0, 0, 0, 0, -41, 7, 0, 0, 0, 0, -76, 1, 0, 0, 0, 0, -104, -3, 0, 0, 0, 0, -28, -5, 0, 0, 0, 0, 13, -11)
@@ -92,23 +93,28 @@ shape = SubResource("RectangleShape2D_42uki")
 [node name="overrideCamera" parent="." unique_id=1451669185 instance=ExtResource("6_cggpd")]
 position = Vector2(32, -80)
 
-[node name="hoverMask" parent="." unique_id=581674079 instance=ExtResource("2_12fag")]
-position = Vector2(453, -38)
-maskName = "hover"
-sprite = ExtResource("6_055b2")
-
 [node name="worm" parent="." unique_id=1699369177 instance=ExtResource("7_055b2")]
 position = Vector2(-323, -144)
 
 [node name="Flybug" parent="." unique_id=1963777610 instance=ExtResource("8_2mgoq")]
 position = Vector2(341, -219)
-curve = SubResource("Curve2D_vcilj")
+curve = SubResource("Curve2D_q0ycs")
 speed = 90
 
-[node name="Mask" parent="." unique_id=1990867742 instance=ExtResource("2_12fag")]
+[node name="hoverMask" parent="." unique_id=581674079 instance=ExtResource("2_12fag")]
+position = Vector2(453, -38)
+maskName = "hover"
+sprite = ExtResource("6_055b2")
+
+[node name="dashMask" parent="." unique_id=1990867742 instance=ExtResource("2_12fag")]
 position = Vector2(368, -160)
 maskName = "dash"
 sprite = ExtResource("9_uhnj4")
+
+[node name="sludgeMask" parent="." unique_id=1049612752 instance=ExtResource("2_12fag")]
+position = Vector2(254, -93)
+maskName = "sludge"
+sprite = ExtResource("10_bl0du")
 
 [node name="swordMask" parent="." unique_id=1389874928 instance=ExtResource("2_12fag")]
 position = Vector2(-20, -37)

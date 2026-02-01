@@ -7,12 +7,35 @@
 [ext_resource type="PackedScene" path="res://Scenes/level_A.tscn" id="5_aet5h"]
 [ext_resource type="PackedScene" uid="uid://mxyhyqbwsr76" path="res://Scenes/mask.tscn" id="6_qq0pw"]
 [ext_resource type="Texture2D" uid="uid://cqiw0plurn45x" path="res://Art/sludge.png" id="7_oxjhd"]
+[ext_resource type="PackedScene" uid="uid://8wugv7be35u0" path="res://Scenes/worm.tscn" id="8_aet5h"]
+[ext_resource type="PackedScene" uid="uid://pxa6go5pfr6s" path="res://Scenes/flybug.tscn" id="9_5puum"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e06xn"]
 size = Vector2(1216, 30.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e273j"]
 size = Vector2(32, 766)
+
+[sub_resource type="Curve2D" id="Curve2D_1212u"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 13, -11, 0, 0, 0, 0, 95, -61, 0, 0, 0, 0, 166, 19, 0, 0, 0, 0, 100, 55, 0, 0, 0, 0, 49, 88, 0, 0, 0, 0, -7, 46, 0, 0, 0, 0, -47, 83, 0, 0, 0, 0, -87, 41, 0, 0, 0, 0, -138, 33, 0, 0, 0, 0, -116, -33, 0, 0, 0, 0, -47, -43, 0, 0, 0, 0, 13, -11)
+}
+point_count = 12
+
+[sub_resource type="Curve2D" id="Curve2D_6txp0"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 13, -11, 0, 0, 0, 0, 95, -61, 0, 0, 0, 0, 166, 19, 0, 0, 0, 0, 100, 55, 0, 0, 0, 0, 49, 88, 0, 0, 0, 0, -7, 46, 0, 0, 0, 0, -47, 83, 0, 0, 0, 0, -87, 41, 0, 0, 0, 0, -138, 33, 0, 0, 0, 0, -116, -33, 0, 0, 0, 0, -47, -43, 0, 0, 0, 0, 13, -11)
+}
+point_count = 12
+
+[sub_resource type="Curve2D" id="Curve2D_r7gh1"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 24.89148, -32.332867, 0, 0, 0, 0, 95, -61, 0, 0, 0, 0, 144.64589, 14.952263, 0, 0, 0, 0, 100, 55, 0, 0, 0, 0, 49, 88, 0, 0, 0, 0, -10.497314, 54.73396, 0, 0, 0, 0, -47, 83, 0, 0, 0, 0, -87, 41, 0, 0, 0, 0, -138, 33, 0, 0, 0, 0, -30.661041, -12.841373, 0, 0, 0, 0, -43.182404, -67.20326, 0, 0, 0, 0, 24.89148, -32.332867)
+}
+point_count = 12
 
 [node name="level_template" type="Node2D" unique_id=741999394]
 
@@ -47,7 +70,42 @@ position = Vector2(32, -80)
 position = Vector2(479, -367)
 nextLevel = ExtResource("5_aet5h")
 
-[node name="Mask" parent="." unique_id=2009403124 instance=ExtResource("6_qq0pw")]
+[node name="sludgeMask" parent="." unique_id=2009403124 instance=ExtResource("6_qq0pw")]
 position = Vector2(-254, 165)
 maskName = "sludge"
 sprite = ExtResource("7_oxjhd")
+
+[node name="worm" parent="." unique_id=1699369177 instance=ExtResource("8_aet5h")]
+position = Vector2(-71, -320)
+
+[node name="worm2" parent="." unique_id=1633825426 instance=ExtResource("8_aet5h")]
+position = Vector2(249, -320)
+
+[node name="worm3" parent="." unique_id=968613554 instance=ExtResource("8_aet5h")]
+position = Vector2(-182, -320)
+
+[node name="worm4" parent="." unique_id=189542224 instance=ExtResource("8_aet5h")]
+position = Vector2(138, -320)
+
+[node name="worm5" parent="." unique_id=1252227560 instance=ExtResource("8_aet5h")]
+position = Vector2(573, -320)
+
+[node name="worm6" parent="." unique_id=1130455997 instance=ExtResource("8_aet5h")]
+position = Vector2(462, -320)
+
+[node name="bug" parent="." unique_id=708398281 instance=ExtResource("9_5puum")]
+position = Vector2(-46, 46)
+curve = SubResource("Curve2D_1212u")
+speed = 160
+
+[node name="bug2" parent="." unique_id=1113290289 instance=ExtResource("9_5puum")]
+position = Vector2(95.000015, 42)
+rotation = 3.114304
+curve = SubResource("Curve2D_6txp0")
+speed = 100
+
+[node name="bug3" parent="." unique_id=397130109 instance=ExtResource("9_5puum")]
+position = Vector2(275, 42.000004)
+rotation = 3.114304
+curve = SubResource("Curve2D_r7gh1")
+speed = 200
