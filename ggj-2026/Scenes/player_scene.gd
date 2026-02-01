@@ -13,8 +13,8 @@ var hoverUsable = false
 var dashVector = 0
 
 @onready var defaultMarkerPosition = $armPivotMarker.position
-var leftMarkerPosition = Vector2(18,-32)
-var rightMarkerPosition = Vector2(-18,-32)
+var leftMarkerPosition = Vector2(18,-38)
+var rightMarkerPosition = Vector2(-18,-38)
 var leftMarkerTilt = 12.0
 var rightMarkerTilt = -12.0
 var maskMode = 0
@@ -42,12 +42,17 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		hovering = false
+		if $jumpSound.playing == false:
+			$jumpSound.play()
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("move_left", "move_right")
 	if direction:
 		velocity.x = direction * SPEED
+		if $footstepSound.playing == false:
+			if is_on_floor():
+				$footstepSound.play()
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED/18)
 	
@@ -97,31 +102,40 @@ func _mask_use(mask, direction):#func is given the mask name, and does the corre
 					$swordTimer.start(.8)
 					if animatedSprite.flip_h == true:
 						swordInstance.scale.x = -1
+					if $swordSound.playing == false:
+						$swordSound.play()
 			"dash":
 				if $dashTimer.is_stopped():
 					dashVector = 50 * direction
 					$dashTimer.start()
+					if $dashSound.playing == false:
+						$dashSound.play()
 			"hover":
 				if hoverUsable == true:
 					hoverUsable = false
 					hovering = true
 					velocity.y = 0
 					$hoverTimer.start()
+					if $hoverSound.playing == false:
+						$hoverSound.play()
 			"highjump":
 				if is_on_floor():
 					velocity.y = -600
 					hovering = false
+					if $highjumpSound.playing == false:
+						$highjumpSound.play()
 			"none":
-				pass
-			"hover":
 				pass
 			"Template":
 				velocity.y = JUMP_VELOCITY
 			"sludge":
 				shootSludge(mask)
 			"groundpound":
-				velocity.y = POUND_VELOCITY
-				global.poundReady = true
+				if !is_on_floor():
+					velocity.y = POUND_VELOCITY
+					global.poundReady = true
+					if $poundSound.playing == false:
+						$poundSound.play()
 
 func _mask_swap(rightHanded):
 	var closestMask = get_closest_mask()
@@ -131,6 +145,8 @@ func _mask_swap(rightHanded):
 	if !rightHanded:
 		leftMask = closestMask
 		print("Left Swap")
+	if $beepSound.playing == false:
+		$beepSound.playa()
 
 func get_closest_mask():
 	var overlapArray = $maskDetectorArea2D.get_overlapping_areas()
@@ -152,6 +168,7 @@ func mask_updates():
 
 func die():
 	global.main.load_level(global.main.level2)
+	global.main.deathSound()
 
 
 func _on_hitbox_area_2d_area_entered(area: Area2D) -> void:
@@ -177,6 +194,7 @@ func shootSludge(mask):
 		else:
 			sludgeInst.linear_velocity = Vector2(500,-300)
 		sludgeTimer.start(1)
+		$sludgeSound.play()
 	
 
 

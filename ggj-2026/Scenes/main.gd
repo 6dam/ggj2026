@@ -18,3 +18,7 @@ func load_level(nextLevel):
 	var levelInstance = nextLevel.instantiate()
 	add_child(levelInstance)
 	global.level = levelInstance
+
+func deathSound():
+	if $deathSound.playing == false:
+		$deathSound.play()
