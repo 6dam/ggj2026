@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ccy8ylcibc0fq" path="res://Scenes/lava.tscn" id="4_xrdnt"]
 [ext_resource type="PackedScene" uid="uid://8wugv7be35u0" path="res://Scenes/worm.tscn" id="5_wrinw"]
 [ext_resource type="Texture2D" uid="uid://cqiw0plurn45x" path="res://Art/sludge.png" id="6_evi0p"]
+[ext_resource type="PackedScene" uid="uid://pxa6go5pfr6s" path="res://Scenes/flybug.tscn" id="7_lsmp6"]
 
 [node name="level1" type="Node2D" unique_id=997325918]
 
@@ -59,3 +60,6 @@ scale = Vector2(191.32587, 47.30076)
 position = Vector2(-578, 79)
 maskName = "sludge"
 sprite = ExtResource("6_evi0p")
+
+[node name="bug" parent="." unique_id=708398281 instance=ExtResource("7_lsmp6")]
+position = Vector2(-763, 131)

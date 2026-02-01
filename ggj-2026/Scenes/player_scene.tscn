@@ -134,6 +134,7 @@ shape = SubResource("CapsuleShape2D_f11s3")
 one_shot = true
 
 [node name="sludgeTimer" type="Timer" parent="." unique_id=316196151]
+one_shot = true
 
 [connection signal="area_entered" from="hitboxArea2D" to="." method="_on_hitbox_area_2d_area_entered"]
 [connection signal="body_entered" from="hitboxArea2D" to="." method="_on_hitbox_area_2d_body_entered"]

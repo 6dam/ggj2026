@@ -10,6 +10,7 @@ var hoverUsable = false
 @onready var leftMarker = $leftMarker2d
 @onready var rightMarker = $rightMarker2d
 @onready var animatedSprite = $AnimatedSprite2D
+@onready var sludgeTimer = $sludgeTimer
 
 func _ready() -> void:
 	pass
@@ -83,7 +84,7 @@ func _mask_use(mask):#func is given the mask name, and does the corresponding ac
 			"Template":
 				velocity.y = JUMP_VELOCITY
 			"sludge":
-				pass
+				shootSludge(mask)
 
 func _mask_swap(rightHanded):
 	var closestMask = get_closest_mask()
@@ -128,4 +129,15 @@ func _on_hitbox_area_2d_body_entered(body: Node2D) -> void:
 
 func _on_hover_timer_timeout() -> void:
 	hovering = false
+	
+func shootSludge(mask):
+	if sludgeTimer.is_stopped():
+		var sludgeInst = global.sludge_ball.instantiate()
+		get_tree().current_scene.add_child(sludgeInst)
+		sludgeInst.global_position = mask.global_position
+		if animatedSprite.flip_h:
+			sludgeInst.linear_velocity = Vector2(-500,-300)
+		else:
+			sludgeInst.linear_velocity = Vector2(500,-300)
+		sludgeTimer.start(1)
 	
