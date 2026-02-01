@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c4r0yj1ccfxw3" path="res://Scenes/override_camera.tscn" id="3_om5go"]
 [ext_resource type="PackedScene" uid="uid://bxqmyalua77ja" path="res://Scenes/exitDoor.tscn" id="4_lmhqv"]
 [ext_resource type="PackedScene" uid="uid://8wugv7be35u0" path="res://Scenes/worm.tscn" id="5_18qjy"]
-[ext_resource type="PackedScene" uid="uid://d315tafabguf0" path="res://Scenes/level_D.tscn" id="5_hgs03"]
+[ext_resource type="PackedScene" uid="uid://br318agg20de4" path="res://Scenes/level_B.tscn" id="5_hgs03"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2bryu"]
 size = Vector2(124, 63)
