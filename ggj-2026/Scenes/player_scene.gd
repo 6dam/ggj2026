@@ -167,8 +167,8 @@ func mask_updates():
 		rightMask.global_position = rightMarker.global_position
 
 func die(): 
-	global.main.load_level(global.level)
 	global.main.deathSound()
+	global.main.load_level(global.currentLevel)
 
 
 func _on_hitbox_area_2d_area_entered(area: Area2D) -> void:
