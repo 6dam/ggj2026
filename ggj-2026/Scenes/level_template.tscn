@@ -2,8 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://ugqxpghr70wf" path="res://Scenes/tileMapLayerTemplate.tscn" id="1_ka7v4"]
 [ext_resource type="PackedScene" uid="uid://chbb8elixtrlj" path="res://Scenes/player_scene.tscn" id="2_1448s"]
-[ext_resource type="PackedScene" uid="uid://b184flniqcbv4" path="res://Scenes/level_A.tscn" id="5_e273j"]
+[ext_resource type="PackedScene" uid="uid://6q4bs1qmi54m" path="res://Scenes/butterfly.tscn" id="5_e273j"]
 [ext_resource type="PackedScene" uid="uid://c4r0yj1ccfxw3" path="res://Scenes/override_camera.tscn" id="5_nop2h"]
+[ext_resource type="Texture2D" uid="uid://1qr1ibrbxj0a" path="res://Art/tysm.png" id="6_g30sg"]
+[ext_resource type="PackedScene" uid="uid://mxyhyqbwsr76" path="res://Scenes/mask.tscn" id="7_ka7v4"]
+[ext_resource type="Texture2D" uid="uid://dchxp608n3o3y" path="res://Art/hoverMask.png" id="8_1448s"]
+[ext_resource type="Texture2D" uid="uid://dd7c3ha8o1od2" path="res://Art/dashMask.png" id="9_ds0tp"]
+[ext_resource type="Texture2D" uid="uid://cqiw0plurn45x" path="res://Art/sludge.png" id="10_uygrl"]
+[ext_resource type="Texture2D" uid="uid://tggkux81jgoq" path="res://Art/swordMask.png" id="11_nop2h"]
+[ext_resource type="Texture2D" uid="uid://c7ih1qk4hcfkf" path="res://Art/imp.png" id="12_ba6q6"]
 [ext_resource type="PackedScene" uid="uid://bxqmyalua77ja" path="res://Scenes/exitDoor.tscn" id="12_n8qc1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e06xn"]
@@ -42,5 +49,34 @@ shape = SubResource("RectangleShape2D_e273j")
 position = Vector2(32, -80)
 
 [node name="ExitDoor" parent="." unique_id=570306949 instance=ExtResource("12_n8qc1")]
-position = Vector2(587, 208)
+position = Vector2(1412, 163)
 nextLevel = ExtResource("5_e273j")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1409516631]
+scale = Vector2(0.465, 0.465)
+texture = ExtResource("6_g30sg")
+
+[node name="hoverMask" parent="." unique_id=2009403124 instance=ExtResource("7_ka7v4")]
+position = Vector2(453, -38)
+maskName = "hover"
+sprite = ExtResource("8_1448s")
+
+[node name="dashMask" parent="." unique_id=1998388199 instance=ExtResource("7_ka7v4")]
+position = Vector2(368, -160)
+maskName = "dash"
+sprite = ExtResource("9_ds0tp")
+
+[node name="sludgeMask" parent="." unique_id=1002175783 instance=ExtResource("7_ka7v4")]
+position = Vector2(254, -93)
+maskName = "sludge"
+sprite = ExtResource("10_uygrl")
+
+[node name="swordMask" parent="." unique_id=1809057066 instance=ExtResource("7_ka7v4")]
+position = Vector2(-20, -37)
+maskName = "sword"
+sprite = ExtResource("11_nop2h")
+
+[node name="groundpound" parent="." unique_id=1186268763 instance=ExtResource("7_ka7v4")]
+position = Vector2(-132, -81)
+maskName = "groundpound"
+sprite = ExtResource("12_ba6q6")
