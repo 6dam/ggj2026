@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://tggkux81jgoq" path="res://Art/swordMask.png" id="11_nop2h"]
 [ext_resource type="Texture2D" uid="uid://c7ih1qk4hcfkf" path="res://Art/imp.png" id="12_ba6q6"]
 [ext_resource type="PackedScene" uid="uid://bxqmyalua77ja" path="res://Scenes/exitDoor.tscn" id="12_n8qc1"]
+[ext_resource type="Texture2D" uid="uid://sivfh0d2thih" path="res://Art/HighJumpMask.png" id="13_ds0tp"]
+[ext_resource type="Texture2D" uid="uid://xrtusq1iemxa" path="res://Art/eagle.png" id="14_uygrl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e06xn"]
 size = Vector2(1216, 30.5)
@@ -80,3 +82,12 @@ sprite = ExtResource("11_nop2h")
 position = Vector2(-132, -81)
 maskName = "groundpound"
 sprite = ExtResource("12_ba6q6")
+
+[node name="Mask" parent="." unique_id=205398138 instance=ExtResource("7_ka7v4")]
+position = Vector2(-179, -257)
+maskName = "highjump"
+sprite = ExtResource("13_ds0tp")
+
+[node name="Mask2" parent="." unique_id=839932103 instance=ExtResource("7_ka7v4")]
+position = Vector2(-495, -186)
+sprite = ExtResource("14_uygrl")
