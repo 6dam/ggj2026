@@ -3,7 +3,11 @@
 [ext_resource type="Script" uid="uid://bb72m1hyrp807" path="res://Scenes/main.gd" id="1_jjvhh"]
 [ext_resource type="AudioStream" uid="uid://cc3g5kmlceqr3" path="res://Sounds/death2.wav" id="3_8gbba"]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://b184flniqcbv4" path="res://Scenes/level_A.tscn" id="4_jjvhh"]
+=======
+[ext_resource type="AudioStream" uid="uid://ddpserb2w4ur" path="res://Sounds/Game Jam 2.wav" id="4_jjvhh"]
+>>>>>>> Stashed changes
 =======
 [ext_resource type="AudioStream" uid="uid://ddpserb2w4ur" path="res://Sounds/Game Jam 2.wav" id="4_jjvhh"]
 >>>>>>> Stashed changes
@@ -15,7 +19,13 @@ script = ExtResource("1_jjvhh")
 stream = ExtResource("3_8gbba")
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [node name="level_A" parent="." unique_id=354581 instance=ExtResource("4_jjvhh")]
+=======
+[node name="musicPlayer" type="AudioStreamPlayer" parent="." unique_id=2088285023]
+stream = ExtResource("4_jjvhh")
+autoplay = true
+>>>>>>> Stashed changes
 =======
 [node name="musicPlayer" type="AudioStreamPlayer" parent="." unique_id=2088285023]
 stream = ExtResource("4_jjvhh")
