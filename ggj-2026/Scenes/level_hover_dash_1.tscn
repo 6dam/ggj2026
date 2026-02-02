@@ -99,12 +99,6 @@ position = Vector2(-407, 149)
 [node name="SpikeBall19" parent="." unique_id=295744990 instance=ExtResource("9_ktu5s")]
 position = Vector2(-462, 144)
 
-[node name="SpikeBall20" parent="." unique_id=1615801218 instance=ExtResource("9_ktu5s")]
-position = Vector2(11, 223)
-
-[node name="SpikeBall21" parent="." unique_id=1470330264 instance=ExtResource("9_ktu5s")]
-position = Vector2(65, 218)
-
 [node name="SpikeBall22" parent="." unique_id=963897398 instance=ExtResource("9_ktu5s")]
 position = Vector2(123, 213)
 
@@ -118,13 +112,16 @@ position = Vector2(261, 209)
 position = Vector2(288, 233)
 
 [node name="SpikeBall26" parent="." unique_id=2037488109 instance=ExtResource("9_ktu5s")]
-position = Vector2(581, 105)
+position = Vector2(389, 245)
 
 [node name="SpikeBall27" parent="." unique_id=1965121096 instance=ExtResource("9_ktu5s")]
 position = Vector2(339, 207)
 
 [node name="SpikeBall28" parent="." unique_id=1892314530 instance=ExtResource("9_ktu5s")]
-position = Vector2(626, 151)
+position = Vector2(418, 210)
 
 [node name="butterfly" parent="." unique_id=654521106 instance=ExtResource("10_3bx3e")]
 position = Vector2(197, 221)
+
+[node name="SpikeBall9" parent="." unique_id=1520551492 instance=ExtResource("9_ktu5s")]
+position = Vector2(470, 237)

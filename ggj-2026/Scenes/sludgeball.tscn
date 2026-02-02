@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://c3lsf6xjsy4gl"]
+[gd_scene format=3 uid="uid://cegibepa1isp6"]
 
-[ext_resource type="Script" uid="uid://jy4vm8134an7" path="res://Scenes/sludgeball.gd" id="1_ddwl1"]
+[ext_resource type="Script" path="res://Scenes/sludgeball.gd" id="1_ddwl1"]
 [ext_resource type="Texture2D" uid="uid://co2fbimxrv0dt" path="res://Art/sludge_ball.png" id="1_mgnsw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ddwl1"]
