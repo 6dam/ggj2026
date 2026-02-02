@@ -1,15 +1,19 @@
 [gd_scene format=3 uid="uid://ct6qgv4jfljsc"]
 
+[ext_resource type="Script" uid="uid://u0bkdxppawjk" path="res://Scenes/spike_ball.gd" id="1_71ief"]
 [ext_resource type="Texture2D" uid="uid://6i5k803qrye3" path="res://Art/spikeBall.png" id="1_vgv1v"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vgv1v"]
 radius = 13.0
 
-[node name="SpikeBall" type="Area2D" unique_id=2020102674 groups=["enemy"]]
+[node name="Node2D" type="Node2D" unique_id=1000568514]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=830462547]
+[node name="SpikeBall" type="Area2D" parent="." unique_id=2020102674 groups=["enemy"]]
+script = ExtResource("1_71ief")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpikeBall" unique_id=830462547]
 texture_filter = 1
 texture = ExtResource("1_vgv1v")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1526202817 groups=["enemy"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeBall" unique_id=1526202817 groups=["enemy"]]
 shape = SubResource("CircleShape2D_vgv1v")
