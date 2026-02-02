@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://chbb8elixtrlj" path="res://Scenes/player_scene.tscn" id="2_0fivq"]
 [ext_resource type="PackedScene" uid="uid://c4r0yj1ccfxw3" path="res://Scenes/override_camera.tscn" id="3_bg681"]
 [ext_resource type="PackedScene" uid="uid://bxqmyalua77ja" path="res://Scenes/exitDoor.tscn" id="4_htbnb"]
-[ext_resource type="PackedScene" uid="uid://bxerl5etsp4rj" path="res://Scenes/level_dash.tscn" id="5_wi8fe"]
+[ext_resource type="PackedScene" uid="uid://j4jghb7c66v7" path="res://Scenes/leavel_HighJumpAndDash.tscn" id="5_htbnb"]
 [ext_resource type="PackedScene" uid="uid://8wugv7be35u0" path="res://Scenes/worm.tscn" id="6_kb6ua"]
 [ext_resource type="PackedScene" uid="uid://6q4bs1qmi54m" path="res://Scenes/butterfly.tscn" id="7_0fivq"]
 [ext_resource type="PackedScene" uid="uid://mxyhyqbwsr76" path="res://Scenes/mask.tscn" id="8_htbnb"]
@@ -191,7 +191,7 @@ position = Vector2(32, -80)
 
 [node name="ExitDoor" parent="." unique_id=570306949 instance=ExtResource("4_htbnb")]
 position = Vector2(572, 208)
-nextLevel = ExtResource("5_wi8fe")
+nextLevel = ExtResource("5_htbnb")
 
 [node name="worm" parent="." unique_id=1699369177 instance=ExtResource("6_kb6ua")]
 position = Vector2(352, 189)

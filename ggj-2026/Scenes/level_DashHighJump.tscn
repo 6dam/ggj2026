@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://chbb8elixtrlj" path="res://Scenes/player_scene.tscn" id="2_spcft"]
 [ext_resource type="PackedScene" uid="uid://c4r0yj1ccfxw3" path="res://Scenes/override_camera.tscn" id="3_m6tfp"]
 [ext_resource type="PackedScene" uid="uid://bxqmyalua77ja" path="res://Scenes/exitDoor.tscn" id="4_ab154"]
-[ext_resource type="PackedScene" uid="uid://b184flniqcbv4" path="res://Scenes/level_A.tscn" id="5_ts23b"]
+[ext_resource type="PackedScene" uid="uid://4i2hd8emjtwq" path="res://Scenes/level_hover_dash_1.tscn" id="5_ts23b"]
 [ext_resource type="PackedScene" uid="uid://8wugv7be35u0" path="res://Scenes/worm.tscn" id="6_w5co0"]
 [ext_resource type="PackedScene" uid="uid://mxyhyqbwsr76" path="res://Scenes/mask.tscn" id="7_m6tfp"]
 [ext_resource type="Texture2D" uid="uid://sivfh0d2thih" path="res://Art/HighJumpMask.png" id="8_ab154"]

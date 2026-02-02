@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://chbb8elixtrlj" path="res://Scenes/player_scene.tscn" id="2_mg1ou"]
 [ext_resource type="PackedScene" uid="uid://c4r0yj1ccfxw3" path="res://Scenes/override_camera.tscn" id="3_rnq50"]
 [ext_resource type="PackedScene" uid="uid://bxqmyalua77ja" path="res://Scenes/exitDoor.tscn" id="4_ovfpg"]
-[ext_resource type="PackedScene" path="res://Scenes/level_A.tscn" id="5_ktu5s"]
+[ext_resource type="PackedScene" uid="uid://fwhmwxuqpiyv" path="res://Scenes/level_sword_1.tscn" id="5_3bx3e"]
 [ext_resource type="PackedScene" uid="uid://mxyhyqbwsr76" path="res://Scenes/mask.tscn" id="6_ovfpg"]
 [ext_resource type="Texture2D" uid="uid://dchxp608n3o3y" path="res://Art/hoverMask.png" id="7_ktu5s"]
 [ext_resource type="Texture2D" uid="uid://dd7c3ha8o1od2" path="res://Art/dashMask.png" id="8_3bx3e"]
@@ -48,7 +48,7 @@ position = Vector2(32, -80)
 
 [node name="ExitDoor" parent="." unique_id=570306949 instance=ExtResource("4_ovfpg")]
 position = Vector2(587, 208)
-nextLevel = ExtResource("5_ktu5s")
+nextLevel = ExtResource("5_3bx3e")
 
 [node name="hoverMask" parent="." unique_id=2009403124 instance=ExtResource("6_ovfpg")]
 position = Vector2(-423, -219)

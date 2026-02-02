@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://6q4bs1qmi54m" path="res://Scenes/butterfly.tscn" id="3_fyyxw"]
 [ext_resource type="PackedScene" uid="uid://c4r0yj1ccfxw3" path="res://Scenes/override_camera.tscn" id="3_srkgy"]
 [ext_resource type="PackedScene" uid="uid://bxqmyalua77ja" path="res://Scenes/exitDoor.tscn" id="4_01rng"]
-[ext_resource type="PackedScene" path="res://Scenes/level_A.tscn" id="5_fyyxw"]
 [ext_resource type="PackedScene" uid="uid://mxyhyqbwsr76" path="res://Scenes/mask.tscn" id="6_01rng"]
+[ext_resource type="PackedScene" uid="uid://b5h4h8ioyhbka" path="res://Scenes/level_sludge_1.tscn" id="6_fyyxw"]
 [ext_resource type="Texture2D" uid="uid://tggkux81jgoq" path="res://Art/swordMask.png" id="7_fyyxw"]
 [ext_resource type="PackedScene" uid="uid://pxa6go5pfr6s" path="res://Scenes/flybug.tscn" id="8_heiy6"]
 
@@ -16,7 +16,7 @@ size = Vector2(1216, 30.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e273j"]
 size = Vector2(32, 766)
 
-[sub_resource type="Curve2D" id="Curve2D_fyyxw"]
+[sub_resource type="Curve2D" id="Curve2D_heiy6"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 24, -32, 0, 0, 0, 0, 65, -16, 0, 0, 0, 0, 92, 37, 0, 0, 0, 0, 43, 88, 0, 0, 0, 0, -31, 104, 0, 0, 0, 0, -84, 58, 0, 0, 0, 0, -89, 4, 0, 0, 0, 0, -33, -34, 0, 0, 0, 0, 24, -32)
@@ -63,7 +63,7 @@ position = Vector2(32, -80)
 
 [node name="ExitDoor" parent="." unique_id=570306949 instance=ExtResource("4_01rng")]
 position = Vector2(-512, -47)
-nextLevel = ExtResource("5_fyyxw")
+nextLevel = ExtResource("6_fyyxw")
 
 [node name="swordMask" parent="." unique_id=2009403124 instance=ExtResource("6_01rng")]
 position = Vector2(32, 101)
@@ -72,7 +72,7 @@ sprite = ExtResource("7_fyyxw")
 
 [node name="bug" parent="." unique_id=708398281 instance=ExtResource("8_heiy6")]
 position = Vector2(360, 120)
-curve = SubResource("Curve2D_fyyxw")
+curve = SubResource("Curve2D_heiy6")
 
 [node name="PathFollow2D" parent="bug" index="0" unique_id=625500352]
 position = Vector2(24, -32)

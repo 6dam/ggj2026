@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://chbb8elixtrlj" path="res://Scenes/player_scene.tscn" id="2_guh2u"]
 [ext_resource type="PackedScene" uid="uid://c4r0yj1ccfxw3" path="res://Scenes/override_camera.tscn" id="3_gpkgm"]
 [ext_resource type="PackedScene" uid="uid://bxqmyalua77ja" path="res://Scenes/exitDoor.tscn" id="4_1nsdg"]
-[ext_resource type="PackedScene" uid="uid://d315tafabguf0" path="res://Scenes/level_D.tscn" id="5_7kk6m"]
+[ext_resource type="PackedScene" uid="uid://dp0vk5ylqysbt" path="res://Scenes/level_groundpound.tscn" id="5_hltoy"]
 [ext_resource type="PackedScene" uid="uid://6q4bs1qmi54m" path="res://Scenes/butterfly.tscn" id="7_2q804"]
 [ext_resource type="PackedScene" uid="uid://mxyhyqbwsr76" path="res://Scenes/mask.tscn" id="8_daq85"]
 [ext_resource type="PackedScene" uid="uid://pxa6go5pfr6s" path="res://Scenes/flybug.tscn" id="8_sb7qk"]
@@ -46,7 +46,7 @@ size = Vector2(32, 766)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m0h31"]
 size = Vector2(123.875, 63)
 
-[sub_resource type="Curve2D" id="Curve2D_hltoy"]
+[sub_resource type="Curve2D" id="Curve2D_guh2u"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 13, -11, 0, 0, 0, 0, 65, -16, 0, 0, 0, 0, 97, -8, 0, 0, 0, 0, 32, 3, 0, 0, 0, 0, -41, 7, 0, 0, 0, 0, -76, 1, 0, 0, 0, 0, -104, -3, 0, 0, 0, 0, -28, -5, 0, 0, 0, 0, 13, -11)
@@ -169,7 +169,7 @@ position = Vector2(32, -80)
 
 [node name="ExitDoor" parent="." unique_id=570306949 instance=ExtResource("4_1nsdg")]
 position = Vector2(572, 208)
-nextLevel = ExtResource("5_7kk6m")
+nextLevel = ExtResource("5_hltoy")
 
 [node name="Mask" parent="." unique_id=2009403124 instance=ExtResource("8_daq85")]
 position = Vector2(-225, -284)
@@ -178,7 +178,7 @@ sprite = ExtResource("9_hltoy")
 
 [node name="bug" parent="." unique_id=708398281 instance=ExtResource("8_sb7qk")]
 position = Vector2(7, -217)
-curve = SubResource("Curve2D_hltoy")
+curve = SubResource("Curve2D_guh2u")
 
 [node name="butterfly" parent="." unique_id=654521106 instance=ExtResource("7_2q804")]
 position = Vector2(-88, -99)

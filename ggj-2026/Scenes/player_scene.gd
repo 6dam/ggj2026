@@ -167,7 +167,7 @@ func mask_updates():
 		rightMask.global_position = rightMarker.global_position
 
 func die(): 
-	global.main.load_level(global.main.level2)
+	global.main.load_level(global.level)
 	global.main.deathSound()
 
 

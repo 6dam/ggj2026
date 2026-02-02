@@ -1,10 +1,10 @@
 extends Node
-var level1 = preload("res://Scenes/level_1.tscn")
-var level2 = preload("res://Scenes/level_2.tscn")
+#var level1 = preload("res://Scenes/level_1.tscn")
+#var level2 = preload("res://Scenes/level_2.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	global.main = self
-	global.level = $level_2
+	global.level = $level_A #$level_2
 
 
 

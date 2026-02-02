@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://chbb8elixtrlj" path="res://Scenes/player_scene.tscn" id="2_0bj6k"]
 [ext_resource type="PackedScene" uid="uid://c4r0yj1ccfxw3" path="res://Scenes/override_camera.tscn" id="3_dkmr7"]
 [ext_resource type="PackedScene" uid="uid://bxqmyalua77ja" path="res://Scenes/exitDoor.tscn" id="4_0rmob"]
-[ext_resource type="PackedScene" path="res://Scenes/level_A.tscn" id="5_10scy"]
+[ext_resource type="PackedScene" uid="uid://xyavu7sw82on" path="res://Scenes/level_DashHighJump.tscn" id="5_fxwlf"]
 [ext_resource type="PackedScene" uid="uid://mxyhyqbwsr76" path="res://Scenes/mask.tscn" id="6_0rmob"]
 [ext_resource type="Texture2D" uid="uid://sivfh0d2thih" path="res://Art/HighJumpMask.png" id="7_10scy"]
 [ext_resource type="Texture2D" uid="uid://dd7c3ha8o1od2" path="res://Art/dashMask.png" id="8_fxwlf"]
@@ -48,7 +48,7 @@ position = Vector2(32, -80)
 
 [node name="ExitDoor" parent="." unique_id=570306949 instance=ExtResource("4_0rmob")]
 position = Vector2(-487, -371)
-nextLevel = ExtResource("5_10scy")
+nextLevel = ExtResource("5_fxwlf")
 
 [node name="highjumpMask" parent="." unique_id=2009403124 instance=ExtResource("6_0rmob")]
 position = Vector2(423, -282)

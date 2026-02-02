@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://bk0yujgr3nlxs"]
 
 [ext_resource type="Script" uid="uid://bb72m1hyrp807" path="res://Scenes/main.gd" id="1_jjvhh"]
-[ext_resource type="PackedScene" uid="uid://v53e41rg2r73" path="res://Scenes/level_2.tscn" id="2_bo1nx"]
 [ext_resource type="AudioStream" uid="uid://cc3g5kmlceqr3" path="res://Sounds/death2.wav" id="3_8gbba"]
+[ext_resource type="PackedScene" uid="uid://b184flniqcbv4" path="res://Scenes/level_A.tscn" id="4_jjvhh"]
 
 [node name="main" type="Node2D" unique_id=177634896]
 script = ExtResource("1_jjvhh")
 
-[node name="level_2" parent="." unique_id=741999394 instance=ExtResource("2_bo1nx")]
-
 [node name="deathSound" type="AudioStreamPlayer" parent="." unique_id=2069191289]
 stream = ExtResource("3_8gbba")
+
+[node name="level_A" parent="." unique_id=354581 instance=ExtResource("4_jjvhh")]

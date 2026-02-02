@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c4r0yj1ccfxw3" path="res://Scenes/override_camera.tscn" id="3_54s27"]
 [ext_resource type="PackedScene" uid="uid://bxqmyalua77ja" path="res://Scenes/exitDoor.tscn" id="4_2up04"]
 [ext_resource type="Texture2D" uid="uid://dchxp608n3o3y" path="res://Art/hoverMask.png" id="4_d0su4"]
-[ext_resource type="PackedScene" path="res://Scenes/level_A.tscn" id="5_d0su4"]
+[ext_resource type="PackedScene" uid="uid://bxerl5etsp4rj" path="res://Scenes/level_dash.tscn" id="7_54s27"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e06xn"]
 size = Vector2(1216, 30.5)
@@ -92,4 +92,4 @@ position = Vector2(32, -80)
 
 [node name="ExitDoor" parent="." unique_id=570306949 instance=ExtResource("4_2up04")]
 position = Vector2(512, -112)
-nextLevel = ExtResource("5_d0su4")
+nextLevel = ExtResource("7_54s27")

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://chbb8elixtrlj" path="res://Scenes/player_scene.tscn" id="2_t120q"]
 [ext_resource type="PackedScene" uid="uid://c4r0yj1ccfxw3" path="res://Scenes/override_camera.tscn" id="3_161kf"]
 [ext_resource type="PackedScene" uid="uid://bxqmyalua77ja" path="res://Scenes/exitDoor.tscn" id="4_yeypv"]
-[ext_resource type="PackedScene" path="res://Scenes/level_A.tscn" id="5_ogob7"]
+[ext_resource type="PackedScene" uid="uid://cqxyvhte7auka" path="res://Scenes/level_SludgeHoverGroundPound.tscn" id="5_7yjhk"]
 [ext_resource type="PackedScene" uid="uid://mxyhyqbwsr76" path="res://Scenes/mask.tscn" id="6_yeypv"]
 [ext_resource type="Texture2D" uid="uid://dd7c3ha8o1od2" path="res://Art/dashMask.png" id="7_ogob7"]
 [ext_resource type="Texture2D" uid="uid://tggkux81jgoq" path="res://Art/swordMask.png" id="8_vgd83"]
@@ -19,21 +19,21 @@ size = Vector2(1216, 30.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e273j"]
 size = Vector2(32, 766)
 
-[sub_resource type="Curve2D" id="Curve2D_8ce3x"]
+[sub_resource type="Curve2D" id="Curve2D_d4i8j"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 13, -11, 0, 0, 0, 0, 73, -36, 0, 0, 0, 0, 109, 115, 0, 0, 0, 0, -66, 115, 0, 0, 0, 0, -147, 85, 0, 0, 0, 0, -96, 31, 0, 0, 0, 0, -175, 30, 0, 0, 0, 0, -105, -17, 0, 0, 0, 0, 13, -11)
 }
 point_count = 9
 
-[sub_resource type="Curve2D" id="Curve2D_hgbbo"]
+[sub_resource type="Curve2D" id="Curve2D_y4u8o"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 13, -11, 0, 0, 0, 0, 65, -16, 0, 0, 0, 0, 97, -8, 0, 0, 0, 0, 32, 3, 0, 0, 0, 0, -41, 7, 0, 0, 0, 0, -76, 1, 0, 0, 0, 0, -104, -3, 0, 0, 0, 0, -28, -5, 0, 0, 0, 0, 13, -11)
 }
 point_count = 9
 
-[sub_resource type="Curve2D" id="Curve2D_7yjhk"]
+[sub_resource type="Curve2D" id="Curve2D_ipn12"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 13, -11, 0, 0, 0, 0, 65, -16, 0, 0, 0, 0, 97, -8, 0, 0, 0, 0, 32, 3, 0, 0, 0, 0, -41, 7, 0, 0, 0, 0, -76, 1, 0, 0, 0, 0, -104, -3, 0, 0, 0, 0, -28, -5, 0, 0, 0, 0, 13, -11)
@@ -71,7 +71,7 @@ position = Vector2(32, -80)
 
 [node name="ExitDoor" parent="." unique_id=570306949 instance=ExtResource("4_yeypv")]
 position = Vector2(6, -47)
-nextLevel = ExtResource("5_ogob7")
+nextLevel = ExtResource("5_7yjhk")
 
 [node name="dashMask" parent="." unique_id=2009403124 instance=ExtResource("6_yeypv")]
 position = Vector2(-551, 102)
@@ -85,7 +85,7 @@ sprite = ExtResource("8_vgd83")
 
 [node name="bug" parent="." unique_id=708398281 instance=ExtResource("10_d4i8j")]
 position = Vector2(394, -207)
-curve = SubResource("Curve2D_8ce3x")
+curve = SubResource("Curve2D_d4i8j")
 speed = 120
 
 [node name="worm" parent="." unique_id=1699369177 instance=ExtResource("11_y4u8o")]
@@ -104,11 +104,11 @@ sprite = ExtResource("12_ipn12")
 
 [node name="bug2" parent="." unique_id=1049332553 instance=ExtResource("10_d4i8j")]
 position = Vector2(-399, 101)
-curve = SubResource("Curve2D_hgbbo")
+curve = SubResource("Curve2D_y4u8o")
 
 [node name="bug3" parent="." unique_id=1603112471 instance=ExtResource("10_d4i8j")]
 position = Vector2(-178, 98)
-curve = SubResource("Curve2D_7yjhk")
+curve = SubResource("Curve2D_ipn12")
 
 [node name="groundpound" parent="." unique_id=165490966 instance=ExtResource("6_yeypv")]
 position = Vector2(319, -346)
