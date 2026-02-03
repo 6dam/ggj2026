@@ -90,7 +90,7 @@ radius = 25.0
 height = 64.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f11s3"]
-size = Vector2(148, 49.5)
+size = Vector2(148, 56.5)
 
 [node name="playerScene" type="CharacterBody2D" unique_id=1882959398]
 script = ExtResource("1_7cibt")
@@ -163,11 +163,11 @@ one_shot = true
 [node name="groundPoundHitbox" type="Area2D" parent="." unique_id=1974726465]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="groundPoundHitbox" unique_id=1984451110]
-position = Vector2(0, 31.75)
+position = Vector2(0, 28.25)
 shape = SubResource("RectangleShape2D_f11s3")
 
 [node name="maskUseTimer" type="Timer" parent="." unique_id=1070795571]
-wait_time = 0.1
+wait_time = 0.2
 one_shot = true
 
 [node name="jumpSound" type="AudioStreamPlayer" parent="." unique_id=1200919768]

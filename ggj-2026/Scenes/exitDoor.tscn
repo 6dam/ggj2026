@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cbgsh2kcmjral" path="res://Art/exitDoor.png" id="2_4n2fx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m2qj8"]
-size = Vector2(4, 4)
+size = Vector2(14, 6)
 
 [node name="ExitDoor" type="Area2D" unique_id=570306949]
 z_index = -5
@@ -15,7 +15,7 @@ texture_filter = 1
 texture = ExtResource("2_4n2fx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=81118013]
-position = Vector2(0, 45)
+position = Vector2(0, 44)
 shape = SubResource("RectangleShape2D_m2qj8")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
